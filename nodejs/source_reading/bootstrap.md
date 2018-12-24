@@ -13,3 +13,11 @@
                     - `NODE_BUILTIN_ICU_MODULES(V)` 所在文件`node/src/node_internals.h`
             - `ProcessArgv(argv, exec_argv, false);` 所在文件`node/src/node.cc`
             - `node_is_initialized = true;`
+        - `v8_platform.Initialize(per_process_opts->v8_thread_pool_size);` 所在文件`node/src/node.cc`
+        - `V8::Initialize();` 所在文件`node/src/node.cc`
+        - `v8_initialized = true;` 所在文件`node/src/node.cc`
+        - `Start(uv_default_loop(), args, exec_args);` 所在文件`node/src/node.cc`
+        - `v8_platform.StopTracingAgent();` 所在文件`node/src/node.cc`
+        - `v8_initialized = false;` 所在文件`node/src/node.cc`
+        - `V8::Dispose();` 所在文件`node/src/node.cc`
+        - `v8_platform.Dispose();` 所在文件`node/src/node.cc`
