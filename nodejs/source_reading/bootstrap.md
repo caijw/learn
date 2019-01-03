@@ -31,6 +31,10 @@
                 - `Local<Context> context = NewContext(isolate);` 所在文件`node/src/node.cc`
                     - `auto context = Context::New(isolate, nullptr, object_template);` 所在文件`node/src/node.cc`
                     - `Local<String> per_context = NodePerContextSource(isolate);` 所在文件`node/src/node.cc`
+                    - `ScriptCompiler::Source per_context_src(per_context, nullptr);`  所在文件`node/src/node.cc`
+                    - `Local<Script> s = ScriptCompiler::Compile( context, &per_context_src).ToLocalChecked();`  所在文件`node/src/node.cc`
+                    - `s->Run(context).ToLocalChecked();` 所在文件`node/src/node.cc`
+                    ->
             - `node_isolate = nullptr;` 所在文件`node/src/node.cc`
             - `isolate->Dispose();` 所在文件`node/src/node.cc`
         - `v8_platform.StopTracingAgent();` 所在文件`node/src/node.cc`
