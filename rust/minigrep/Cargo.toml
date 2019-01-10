@@ -5,3 +5,9 @@ authors = ["kingweicai <kingweicai@tencent.com>"]
 edition = "2018"
 
 [dependencies]
+
+[profile.dev]
+opt-level = 1
+
+[profile.release]
+opt-level = 3

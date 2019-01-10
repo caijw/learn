@@ -39,7 +39,13 @@ fn simulated_expensive_calculation(intensity: u32) -> u32 {
 }
 
 fn main() {
+    /*
+    闭包可以通过三种方式捕获其环境，他们直接对应函数的三种获取参数的方式：获取所有权，可变借用和不可变借用。这三种捕获值的方式被编码为如下三个 Fn trait：
 
+    FnOnce 消费从周围作用域捕获的变量，闭包周围的作用域被称为其 环境，environment。为了消费捕获到的变量，闭包必须获取其所有权并在定义闭包时将其移动进闭包。其名称的 Once 部分代表了闭包不能多次获取相同变量的所有权的事实，所以它只能被调用一次。
+    FnMut 获取可变的借用值所以可以改变其环境
+    Fn 从其环境获取不可变的借用值
+    */
     let x = vec![1, 2, 3];
 
     let equal_to_x = move |z| z == x;
@@ -49,6 +55,12 @@ fn main() {
     let y = vec![1, 2, 3];
 
     assert!(equal_to_x(y));
+
+    let a = 10;
+    let get_a = || {a};
+    let a1 = get_a();
+    println!("a1: {}", a);
+    assert!(a == a1);
 
 
     let simulated_user_specified_value = 10;

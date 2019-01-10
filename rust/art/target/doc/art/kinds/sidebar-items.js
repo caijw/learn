@@ -1,0 +1,1 @@
+initSidebarItems({"enum":[["PrimaryColor","采用 RGB 色彩模式的主要颜色。"],["SecondaryColor","采用 RGB 色彩模式的次要颜色。"]]});
