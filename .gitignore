@@ -1,4 +1,4 @@
-_book/
+_book/*
 
 *.o
 
@@ -17,3 +17,5 @@ _book/
 *bin-*
 
 *lib-*
+
+target/*
