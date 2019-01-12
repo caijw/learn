@@ -1,0 +1,11 @@
+[[package]]
+name = "a_blog"
+version = "0.1.0"
+dependencies = [
+ "blog 0.1.0",
+]
+
+[[package]]
+name = "blog"
+version = "0.1.0"
+
