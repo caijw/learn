@@ -1,9 +1,19 @@
 _book/
 
-.o
+*.o
 
-.bin
+*.bin
 
-.d
+*.d
 
-.dSYM
+*.dSYM
+
+*.z
+
+*.lib
+
+*.rlib
+
+*bin-*
+
+*lib-*
