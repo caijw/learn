@@ -1,0 +1,9 @@
+[package]
+name = "main"
+version = "0.1.0"
+authors = ["kingweicai <kingweicai@tencent.com>"]
+edition = "2018"
+
+[dependencies]
+pointer = { path = "../pointer" }
+split = { path = "../split" }
