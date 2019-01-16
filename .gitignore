@@ -19,3 +19,5 @@ _book/
 *lib-*
 
 target/
+
+node_modules/
