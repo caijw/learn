@@ -9,3 +9,11 @@ caijw-> silent: true
 1. main.ts
 	year
 	console.log
+
+#### /Users/jingweicai/Documents/code/deno/build_extra/rust/rust.gni
+
+$root_out_dir = .(/target/release)
+out_dir = "$root_out_dir/rust_crates"
+
+#### /Users/jingweicai/Documents/code/deno/BUILD.gn
+rust_build = "//build_extra/rust/"
