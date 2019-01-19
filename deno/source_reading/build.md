@@ -17,3 +17,31 @@ out_dir = "$root_out_dir/rust_crates"
 
 #### /Users/jingweicai/Documents/code/deno/BUILD.gn
 rust_build = "//build_extra/rust/"
+
+
+#### ts call 
+
+- ts: TS call
+
+	- ts: `dispatch.ts` dispatch.sendSync/dispatch.sendAsync
+
+		- ts: `dispatch.ts` sendInternal
+
+			- ts: `dispatch.ts` libdeno.send
+
+				- C++ binding: `binding.cc` void Send(const v8::FunctionCallbackInfo<v8::Value>& args)
+
+					- C++ binding: `binding.cc` DenoIsolate::recv_cb_
+
+					- Rust: `isolate.rs` config.recv_cb
+
+						- Rust: `isolate.rs` pre_dispatch
+
+							- rust `ops.rs` dispatch
+
+
+
+
+
+
+
