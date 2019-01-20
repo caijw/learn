@@ -22,3 +22,5 @@ x = ['hello', 10]; // OK
 let notSure: any = 4;
 notSure = "maybe a string instead";
 notSure = false; // okay, definitely a boolean
+
+console.log('hello1 ');
