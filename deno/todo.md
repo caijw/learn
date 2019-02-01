@@ -23,3 +23,7 @@ message->IsOpaque()
 
 let custom_root = env::var("DENO_DIR").map(|s| s.into()).ok();
 error handle
+
+deno_dir.rs:
+if r.is_err() {
+error handle
