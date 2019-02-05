@@ -12,10 +12,10 @@ https://github.com/sokra/node-voo
 				- deno_dir.rs: cache_path
 					- std::fs::read_to_string(&output_code)
 					- std::fs::read_to_string(&source_map)?;
-	- compiler.rs: compile_sync
-		- compiler.rs: req(specifier, referrer);
-		- compiler.rs: lazy_start(parent_state);
-			- workers.rs: workers::spawn(parent_state.clone(), "compilerMain()".to_string());
+		- compiler.rs: compile_sync
+			- compiler.rs: req(specifier, referrer);
+			- compiler.rs: lazy_start(parent_state);
+				- workers.rs: workers::spawn(parent_state.clone(), "compilerMain()".to_string());
 
 
 
@@ -34,7 +34,7 @@ https://github.com/sokra/node-voo
 							-  d->current_args_->GetReturnValue().Set(ab);
 							- auto recv_ = d->recv_.Get(d->isolate_);
 							- auto v = recv_->Call(context, context->Global(), 1, args);  /*main.ts  libdeno.recv(handleAsyncMsgFromRust); 设置了recv_*/
-			        - isolate.rs: 异步 let task = op
+			        - isolate.rs: 异步 let task = op sender.send((req_id, buf))
 			        - isolate.rs: tokio::spawn(task);
 			        	- isolate.rs: 事件循环里面处理异步 event_loop(&self) : self.complete_op(req_id, buf)
 			        		- isolate.rs: self.ntasks_decrement();

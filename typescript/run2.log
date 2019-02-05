@@ -77,6 +77,7 @@ DEBUG JS - getCurrentDirectory()
 DEBUG JS - useCaseSensitiveFileNames()
 DEBUG JS - recompile false
 DEBUG JS - caijw-> getMessage data:  Uint8Array [ 123, 34, 114, 101, 102, 101, 114, 114, 101, 114, 34, 58, 34, 46, 34, 44, 34, 115, 112, 101, 99, 105, 102, 105, 101, 114, 34, 58, 34, 46, 47, 49, 46, 116, 115, 34, 125 ]
+DEBUG JS - caijw-> onmessage json:  {"referrer":".","specifier":"./1.ts"}
 DEBUG JS - compiler.resolveModule { moduleSpecifier: "./1.ts", containingFile: "." }
 DEBUG JS - compiler.resolveFileName { moduleSpecifier: "./1.ts", containingFile: "." }
 DEBUG JS - os.ts codeFetch ./1.ts .
@@ -714,8 +715,10 @@ console.log(`My name is ${myName}`);
 DEBUG RS - source_code_hash, filename: /Users/jingweicai/Documents/code/learn/typescript/1.ts
 DEBUG RS - cache_path gen: "/Users/jingweicai/.deno/gen"
 DEBUG RS - msg_from_js CodeCache sync true
+DEBUG JS - caijw-> onmessage responseJson:  {"moduleId":"/Users/jingweicai/Documents/code/learn/typescript/1.ts","fileName":"/Users/jingweicai/Documents/code/learn/typescript/1.ts","mediaType":1,"sourceCode":"\nlet myName = 'Tom';\n\nconsole.log(`My name is ${myName}`);\n\n\n","outputCode":"let myName = 'Tom';\nconsole.log(`My name is ${myName}`);\n//# sourceMappingURL=1.js.map\n//# sourceURL=/Users/jingweicai/Documents/code/learn/typescript/1.ts","sourceMap":"{\"version\":3,\"file\":\"1.js\",\"sourceRoot\":\"\",\"sources\":[\"file:///Users/jingweicai/Documents/code/learn/typescript/1.ts\"],\"names\":[],\"mappings\":\"AACA,IAAI,MAAM,GAAG,KAAK,CAAC;AAEnB,OAAO,CAAC,GAAG,CAAC,cAAc,MAAM,EAAE,CAAC,CAAC\"}","scriptVersion":"1"}
 DEBUG RS - msg_from_js WorkerPostMessage sync false
+caijw-> compile_sync: res_json "{\"moduleId\":\"/Users/jingweicai/Documents/code/learn/typescript/1.ts\",\"fileName\":\"/Users/jingweicai/Documents/code/learn/typescript/1.ts\",\"mediaType\":1,\"sourceCode\":\"\\nlet myName = \'Tom\';\\n\\nconsole.log(`My name is ${myName}`);\\n\\n\\n\",\"outputCode\":\"let myName = \'Tom\';\\nconsole.log(`My name is ${myName}`);\\n//# sourceMappingURL=1.js.map\\n//# sourceURL=/Users/jingweicai/Documents/code/learn/typescript/1.ts\",\"sourceMap\":\"{\\\"version\\\":3,\\\"file\\\":\\\"1.js\\\",\\\"sourceRoot\\\":\\\"\\\",\\\"sources\\\":[\\\"file:///Users/jingweicai/Documents/code/learn/typescript/1.ts\\\"],\\\"names\\\":[],\\\"mappings\\\":\\\"AACA,IAAI,MAAM,GAAG,KAAK,CAAC;AAEnB,OAAO,CAAC,GAAG,CAAC,cAAc,MAAM,EAAE,CAAC,CAAC\\\"}\",\"scriptVersion\":\"1\"}"
 DEBUG JS - getMessage
-DEBUG RS - msg_from_js WorkerGetMessage sync false
 DEBUG RS - >>>>> compile_sync END
+DEBUG RS - msg_from_js WorkerGetMessage sync false
 My name is Tom
