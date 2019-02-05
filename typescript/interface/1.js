@@ -1,5 +1,7 @@
-var tom = {
-    name: 'Tom',
+"use strict";
+let jam = {
+    name: 'jam',
     age: 25,
-    gender: 'male'
+    1: 'male'
 };
+console.log(jam);

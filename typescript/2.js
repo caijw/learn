@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const $ = require("./jquery.js");
-console.log($);
+const http = require("http");
+console.log(http);

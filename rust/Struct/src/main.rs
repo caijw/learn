@@ -1,18 +1,21 @@
+#[macro_use]
+extern crate lazy_static;
+use std::sync::Arc;
+use std::sync::Mutex;
 
-#[derive(Debug)]
-struct hello {
-	world: u32
-}
-
-impl hello {
-	pub fn go(i: u32) -> Self {
-		Self {
-			world: i
-		}
-	}
+lazy_static! {
+  static ref C_RID: Mutex<Option<u32>> = Mutex::new(None);
 }
 
 fn main() {
-	let a = hello::go(1);
-    println!("{:?}", a);
+	let mut cell = C_RID.lock().unwrap();
+    println!("{:?}",cell);
+    let rid = cell.get_or_insert_with(|| {
+    	let a = 32;
+    	a
+    });
+    println!("{:?}",cell);
+    // println!("{:?}",*rid);
+
+
 }

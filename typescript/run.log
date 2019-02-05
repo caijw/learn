@@ -1,0 +1,713 @@
+"caijw-> hello deno!"
+caijw-> v8_set_flags_preprocess rest: [], v8_args: ["/Users/jingweicai/Documents/code/deno/target/debug/deno", "--log-debug", "./1.ts"]
+caijw-> v8_set_flags args: ["/Users/jingweicai/Documents/code/deno/target/debug/deno", "--log-debug", "./1.ts"]
+caijw-> v8_set_flags c_argv_len: 3
+caijw-> set_flags args: ["/Users/jingweicai/Documents/code/deno/target/debug/deno", "--log-debug", "./1.ts"]
+caijw-> arg:"/Users/jingweicai/Documents/code/deno/target/debug/deno"
+caijw-> fake_args:["/Users/jingweicai/Documents/code/deno/target/debug/deno"]
+caijw-> matches.free: ["/Users/jingweicai/Documents/code/deno/target/debug/deno"]
+caijw-> arg:"--log-debug"
+caijw-> fake_args:["--log-debug"]
+caijw-> arg:"./1.ts"
+caijw-> fake_args:["./1.ts"]
+caijw-> matches.free: ["./1.ts"]
+caijw-> set_recognized_flags rest: ["/Users/jingweicai/Documents/code/deno/target/debug/deno", "./1.ts"]
+caijw-> rest_argv: ["/Users/jingweicai/Documents/code/deno/target/debug/deno", "./1.ts"]
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/gen
+DEBUG RS - set dir perm to 493
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/deps
+DEBUG RS - set dir perm to 493
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/deps/http
+DEBUG RS - set dir perm to 493
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/deps/https
+DEBUG RS - set dir perm to 493
+DEBUG RS - root /Users/jingweicai/.deno
+DEBUG RS - gen /Users/jingweicai/.deno/gen
+DEBUG RS - deps /Users/jingweicai/.deno/deps
+DEBUG RS - deps_http /Users/jingweicai/.deno/deps/http
+DEBUG RS - deps_https /Users/jingweicai/.deno/deps/https
+caijw-> Execute js_filename: <anonymous>
+DEBUG RS - msg_from_js Start sync true
+DEBUG JS - cwd /Users/jingweicai/Documents/code/learn/typescript
+DEBUG JS - args [ "./1.ts" ]
+DEBUG RS - code_fetch. specifier ./1.ts referrer .
+DEBUG RS - resolve_module specifier ./1.ts referrer .
+DEBUG RS - resolve_module specifier ./1.ts referrer /Users/jingweicai/Documents/code/learn/typescript/./
+DEBUG RS - is_absolute: false
+DEBUG RS - base: file:///Users/jingweicai/Documents/code/learn/typescript/
+DEBUG RS - j: file:///Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - module_name: /Users/jingweicai/Documents/code/learn/typescript/1.ts, filename: /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - fetch local or reload /Users/jingweicai/Documents/code/learn/typescript/1.ts is_module_remote false
+DEBUG RS - content_type: None
+DEBUG RS - found local source 
+DEBUG RS - source_code_hash, filename: /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - cache_path gen: "/Users/jingweicai/.deno/gen"
+DEBUG RS - load_cache code: /Users/jingweicai/.deno/gen/635a801f0934d409cacdf7cfa499cce3bb96026a.js map: /Users/jingweicai/.deno/gen/635a801f0934d409cacdf7cfa499cce3bb96026a.js.map
+DEBUG RS - caijw-> try to get cache hash file, begin
+DEBUG RS - >>>>> compile_sync START
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/gen
+DEBUG RS - set dir perm to 493
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/deps
+DEBUG RS - set dir perm to 493
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/deps/http
+DEBUG RS - set dir perm to 493
+DEBUG RS - mkdir -p /Users/jingweicai/.deno/deps/https
+DEBUG RS - set dir perm to 493
+DEBUG RS - root /Users/jingweicai/.deno
+DEBUG RS - gen /Users/jingweicai/.deno/gen
+DEBUG RS - deps /Users/jingweicai/.deno/deps
+DEBUG RS - deps_http /Users/jingweicai/.deno/deps/http
+DEBUG RS - deps_https /Users/jingweicai/.deno/deps/https
+caijw-> Execute js_filename: <anonymous>
+DEBUG RS - msg_from_js Start sync true
+DEBUG JS - cwd /Users/jingweicai/Documents/code/learn/typescript
+DEBUG JS - args [ "./1.ts" ]
+caijw-> Execute js_filename: <anonymous>
+DEBUG JS - workerMain
+DEBUG JS - getMessage
+DEBUG RS - msg_from_js WorkerGetMessage sync false
+DEBUG RS - op_worker_get_message
+caijw-> Execute js_filename: <anonymous>
+DEBUG JS - useCaseSensitiveFileNames()
+DEBUG JS - getCurrentDirectory()
+DEBUG JS - getCurrentDirectory()
+DEBUG JS - useCaseSensitiveFileNames()
+DEBUG JS - recompile false
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "./1.ts", containingFile: "." }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "./1.ts", containingFile: "." }
+DEBUG JS - os.ts codeFetch ./1.ts .
+DEBUG RS - code_fetch. specifier ./1.ts referrer .
+DEBUG RS - resolve_module specifier ./1.ts referrer .
+DEBUG RS - resolve_module specifier ./1.ts referrer /Users/jingweicai/Documents/code/learn/typescript/./
+DEBUG RS - is_absolute: false
+DEBUG RS - base: file:///Users/jingweicai/Documents/code/learn/typescript/
+DEBUG RS - j: file:///Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - module_name: /Users/jingweicai/Documents/code/learn/typescript/1.ts, filename: /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - fetch local or reload /Users/jingweicai/Documents/code/learn/typescript/1.ts is_module_remote false
+DEBUG RS - content_type: None
+DEBUG RS - found local source 
+DEBUG RS - source_code_hash, filename: /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - cache_path gen: "/Users/jingweicai/.deno/gen"
+DEBUG RS - load_cache code: /Users/jingweicai/.deno/gen/635a801f0934d409cacdf7cfa499cce3bb96026a.js map: /Users/jingweicai/.deno/gen/635a801f0934d409cacdf7cfa499cce3bb96026a.js.map
+DEBUG RS - caijw-> try to get cache hash file, begin
+DEBUG RS - msg_from_js CodeFetch sync true
+DEBUG JS - resolveModule sourceCode length: 58
+DEBUG JS - resolveModule has outputCode: false
+DEBUG JS - resolveModule has source map: false
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "./1.ts", containingFile: "." }
+DEBUG JS - getCurrentDirectory()
+DEBUG JS - getScriptSnapshot() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptVersion() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptKind() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getCompilationSettings()
+DEBUG JS - getDefaultLibFileName()
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - resolveModule sourceCode length: 88487
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - getScriptSnapshot() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.esnext.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.esnext.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1087
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.esnext.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2018.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2018.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1006
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2018.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2017.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2017.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1092
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2017.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2016.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2016.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 937
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2016.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1250
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es5.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es5.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es5.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 200360
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es5.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.core.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.core.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.core.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 19588
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.core.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.collection.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.collection.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 2845
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.collection.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.generator.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.generator.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 2129
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.generator.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.promise.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.promise.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 10652
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.promise.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.iterable.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.iterable.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 14536
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.iterable.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.symbol.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.symbol.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1657
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.symbol.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.proxy.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.proxy.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1961
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.proxy.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.reflect.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.reflect.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1913
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.reflect.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2015.symbol.wellknown.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2015.symbol.wellknown.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 10255
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2015.symbol.wellknown.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2016.array.include.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2016.array.include.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 4870
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2016.array.include.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.object.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2017.object.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2017.object.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 2461
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2017.object.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2017.sharedmemory.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2017.sharedmemory.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 6148
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2017.sharedmemory.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.string.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2017.string.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2017.string.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 2387
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2017.string.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2017.intl.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2017.intl.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1253
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2017.intl.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2017.typedarrays.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2017.typedarrays.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1434
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2017.typedarrays.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2018.promise.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2018.promise.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1361
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2018.promise.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2018.regexp.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2018.regexp.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1236
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2018.regexp.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.es2018.intl.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.es2018.intl.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1821
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.es2018.intl.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.esnext.asynciterable.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.esnext.asynciterable.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1544
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.esnext.asynciterable.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.array.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.esnext.array.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.esnext.array.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 7686
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.esnext.array.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.esnext.bigint.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.esnext.bigint.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 30733
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.esnext.bigint.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.esnext.symbol.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.esnext.symbol.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1002
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.esnext.symbol.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "$asset$/lib.esnext.intl.d.ts", containingFile: "" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "$asset$/lib.esnext.intl.d.ts", containingFile: "" }
+DEBUG JS - resolveModule sourceCode length: 1255
+DEBUG JS - resolveModule has outputCode: true
+DEBUG JS - resolveModule has source map: true
+DEBUG JS - resolveModule has media type: TypeScript
+DEBUG JS - compiler.setFileName { moduleSpecifier: "$asset$/lib.esnext.intl.d.ts", containingFile: "" }
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getCurrentDirectory()
+DEBUG JS - getScriptSnapshot() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptVersion() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptKind() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getCompilationSettings()
+DEBUG JS - getDefaultLibFileName()
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - getScriptSnapshot() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getCurrentDirectory()
+DEBUG JS - getScriptSnapshot() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptVersion() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptKind() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getCompilationSettings()
+DEBUG JS - getDefaultLibFileName()
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - getScriptSnapshot() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getCurrentDirectory()
+DEBUG JS - getScriptSnapshot() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptVersion() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getScriptKind() /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG JS - getCompilationSettings()
+DEBUG JS - getDefaultLibFileName()
+DEBUG JS - compiler.resolveModule { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - compiler.resolveFileName { moduleSpecifier: "lib.deno_runtime.d.ts", containingFile: "$asset$" }
+DEBUG JS - getScriptSnapshot() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es5.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.core.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.collection.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.generator.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.iterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.proxy.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.reflect.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2015.symbol.wellknown.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2016.array.include.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.object.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.sharedmemory.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.string.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2017.typedarrays.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.promise.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.es2018.regexp.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.array.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.symbol.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.asynciterable.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.intl.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.esnext.bigint.d.ts
+DEBUG JS - getScriptSnapshot() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptVersion() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - getScriptKind() $asset$/lib.deno_runtime.d.ts
+DEBUG JS - os.ts codeCache /Users/jingweicai/Documents/code/learn/typescript/1.ts let myName = 'Tom';
+
+console.log(`My name is ${myName}`);
+ let myName = 'Tom';
+console.log(`My name is ${myName}`);
+//# sourceMappingURL=1.js.map
+//# sourceURL=/Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - source_code_hash, filename: /Users/jingweicai/Documents/code/learn/typescript/1.ts
+DEBUG RS - cache_path gen: "/Users/jingweicai/.deno/gen"
+DEBUG RS - msg_from_js CodeCache sync true
+DEBUG RS - msg_from_js WorkerPostMessage sync false
+DEBUG JS - getMessage
+DEBUG RS - msg_from_js WorkerGetMessage sync false
+DEBUG RS - >>>>> compile_sync END
+My name is Tom

@@ -1,18 +1,19 @@
-var Student = /** @class */ (function () {
-    function Student(firstName, middleInitial, lastName) {
+"use strict";
+class Student {
+    constructor(firstName, middleInitial, lastName) {
         this.firstName = firstName;
         this.middleInitial = middleInitial;
         this.lastName = lastName;
         this.fullName = firstName + " " + middleInitial + " " + lastName;
     }
-    return Student;
-}());
+}
 function greeter(person) {
     return "Hello, " + person.firstName + " " + person.lastName;
 }
-var user = new Student("Jane", "M.", "User");
-var x;
+let user = new Student("Jane", "M.", "User");
+let x;
 x = ['hello', 10]; // OK
-var notSure = 4;
+let notSure = 4;
 notSure = "maybe a string instead";
 notSure = false; // okay, definitely a boolean
+console.log('hello1 ');
