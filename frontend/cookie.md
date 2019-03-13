@@ -1,0 +1,4 @@
+
+HttpOnly
+
+只能由http请求带cookie，js无法读取cookie
