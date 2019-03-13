@@ -16,8 +16,7 @@
 - window.name + iframe跨域
 - postMessage跨域
 - 跨域资源共享（CORS）
-- nginx代理跨域
-- nodejs中间件代理跨域
+- 代理到同域： nginx代理跨域，nodejs中间件代理跨域
 - WebSocket协议跨域
 
 ### 通过jsonp跨域
@@ -214,6 +213,8 @@ postMessage是HTML5 XMLHttpRequest Level 2中的API，且是为数不多可以�
 
 ## 跨域资源共享（CORS）
 
+Cross-origin resource sharing
+
 普通跨域请求：只服务端设置Access-Control-Allow-Origin即可，前端无须设置，若要带cookie请求：前后端都需要设置。
 
 需注意的是：由于同源策略的限制，所读取的cookie为跨域请求接口所在域的cookie，而非当前页。
@@ -242,9 +243,25 @@ xhr.onreadystatechange = function() {
 2. 服务端设置
 
 响应头:
-- Access-Control-Allow-Origin 允许跨域访问的域名：若有端口需写全（协议+域名+端口），若没有端口末尾不用加'/'
-- Access-Control-Allow-Credentials 允许前端带认证cookie：启用此项后，上面的域名不能为'*'，必须指定具体的域名，否则浏览器会提示
-- Access-Control-Allow-Headers 允许的跨域头字段 
+Access-Control-Allow-Origin
+
+允许跨域访问的域名：若有端口需写全（协议+域名+端口），若没有端口末尾不用加'/'
+
+Access-Control-Allow-Credentials
+
+允许前端带认证cookie：启用此项后，上面的域名不能为'\*'，必须指定具体的域名，否则浏览器会提示 
+
+Access-Control-Allow-Headers 
+
+允许的跨域头字段 
+
+Access-Control-Allow-Methods 
+
+允许跨域请求是方法
+
+Access-Control-Expose-Headers 
+
+CORS请求时，XMLHttpRequest对象的getResponseHeader()方法只能拿到6个基本字段：Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma。如果想拿到其他字段，就必须在Access-Control-Expose-Headers里面指定。
 
 ## nginx代理跨域
 
