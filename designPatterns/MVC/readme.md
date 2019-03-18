@@ -65,12 +65,12 @@ MVP模式把MVC模式中的Controller换成了Presenter。MVP打破了View原来
 
 ### MVP的优缺点
 
-#### 优点
+#### MVP的优点
 
 - 便于测试。Presenter对View是通过接口进行，在对Presenter进行不依赖UI环境的单元测试的时候。可以通过Mock一个View对象，这个对象只需要实现了View的接口即可。然后依赖注入到Presenter中，单元测试的时候就可以完整的测试Presenter应用逻辑的正确性。
 - View可以进行组件化。在MVP当中，View不依赖Model。这样就可以让View从特定的业务场景中脱离出来，可以说View可以做到对业务完全无知。它只需要提供一系列接口提供给上层操作。这样就可以做到高度可复用的View组件。
 
-#### 缺点
+#### MVP的缺点
 
 - Presenter中除了应用逻辑以外，还有大量的View->Model，Model->View的手动同步逻辑，造成Presenter比较笨重，维护起来会比较困难。
 
@@ -92,12 +92,12 @@ MVVM的调用关系和MVP一样。但是，在ViewModel当中会有一个叫Bind
 
 ### MVVM的优缺点
 
-#### 优点
+#### MVVM的优点
 
 - 提高可维护性。解决了MVP大量的手动View和Model同步的问题，提供双向绑定机制。提高了代码的可维护性。
 - 简化测试。因为同步逻辑是交由Binder做的，View跟着Model同时变更，所以只需要保证Model的正确性，View就正确。大大减少了对View同步更新的测试。
 
-#### 缺点
+#### MVVM的缺点
 
 - 过于简单的图形界面不适用，或说牛刀杀鸡
 - 对于大型的图形应用程序，视图状态较多，ViewModel的构建和维护的成本都会比较高
