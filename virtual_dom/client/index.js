@@ -1,11 +1,11 @@
-var snabbdom = require('snabbdom');
+var snabbdom = require('../snabbdom');
 var patch = snabbdom.init([ // Init patch function with chosen modules
-    require('snabbdom/modules/class').default, // makes it easy to toggle classes
-    require('snabbdom/modules/props').default, // for setting properties on DOM elements
-    require('snabbdom/modules/style').default, // handles styling on elements with support for animations
-    require('snabbdom/modules/eventlisteners').default, // attaches event listeners
+    require('../snabbdom/modules/class').default, // makes it easy to toggle classes
+    require('../snabbdom/modules/props').default, // for setting properties on DOM elements
+    require('../snabbdom/modules/style').default, // handles styling on elements with support for animations
+    require('../snabbdom/modules/eventlisteners').default, // attaches event listeners
 ]);
-var h = require('snabbdom/h').default; // helper function for creating vnodes
+var h = require('../snabbdom/h').default; // helper function for creating vnodes
 
 var container = document.getElementById('container');
 
@@ -55,5 +55,7 @@ var newVnode = h('div#container.two.classes', {
         }
     }, 'I\'ll take you places!')
 ]);
-// Second `patch` invocation
-patch(vnode, newVnode); // Snabbdom efficiently updates the old view to the new state
+setTimeout(function () {
+    // Second `patch` invocation
+    patch(vnode, newVnode); // Snabbdom efficiently updates the old view to the new state
+}, 5000);
