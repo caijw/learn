@@ -16,3 +16,5 @@ app.listen(httpConfig.port, httpConfig.address, function (err) {
     }
 
 });
+
+process.title = "vd_server";

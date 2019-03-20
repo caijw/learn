@@ -287,6 +287,9 @@ export function init(modules: Array<Partial<Module>>, domApi?: DOMAPI) {
   }
 
   return function patch(oldVnode: VNode | Element, vnode: VNode): VNode {
+    console.log('hello');
+    // console.log('hello');
+    debugger
     let i: number, elm: Node, parent: Node;
     const insertedVnodeQueue: VNodeQueue = [];
     for (i = 0; i < cbs.pre.length; ++i) cbs.pre[i]();

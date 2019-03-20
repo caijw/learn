@@ -30,11 +30,10 @@
     "xyz": "2.1.0"
   },
   "scripts": {
-    "pretest": "npm run compile",
     "test": "testem",
     "compile": "npm run compile-es && npm run compile-commonjs",
-    "compile-es": "tsc --outDir es --module es6 --moduleResolution node",
-    "compile-commonjs": "tsc --outDir ./",
+    "compile-es": "tsc -w --outDir es --module es6 --moduleResolution node",
+    "compile-commonjs": "tsc -w --outDir ./",
     "prepublish": "npm run compile",
     "release-major": "xyz --repo git@github.com:paldepind/snabbdom.git --increment major",
     "release-minor": "xyz --repo git@github.com:paldepind/snabbdom.git --increment minor",
