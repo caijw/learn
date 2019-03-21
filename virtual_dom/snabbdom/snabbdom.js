@@ -281,8 +281,6 @@ function init(modules, domApi) {
         }
     }
     return function patch(oldVnode, vnode) {
-        // console.log('hello');
-        // console.log('hello');
         debugger;
         var i, elm, parent;
         var insertedVnodeQueue = [];
