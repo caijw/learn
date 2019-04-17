@@ -3,19 +3,44 @@
 - Local<Message>
 
 
-Platform: 用来管理isolate，确定他是在后台线程还是前台线程运行，管理线程池等。
 
-Isolate: 一个单独的v8引擎实例，Isolate有完全独立的状态，对象在isolate之间不能共享。我们可以创建多个isolate，然后再不同的线程中使用。isolate在一个时刻只能由一个线程执行，多线程时必须加锁保证同步。
+v8::Isolate:
 
-v8::Isolate::Scope: Stack-allocated class which sets the isolate for all operations executed within a local scope. isolate的一个范围，从概念上说是用来给每个引擎设置一个单独执行的环境。该对象只能在栈上分配。
+Isolate represents an isolated instance of the V8 engine. V8 isolates have completely separate states. Objects from one isolate must not be used in other isolates. The embedder can create multiple isolates and use them in parallel in multiple threads. An isolate can be entered by at most one thread at any given time. The Locker/Unlocker API must be used to synchronize.
 
 
-HandleScope: 管理本地Handle
+Isolate::Scope: 
 
-Context: context是有自己内置的函数和对象的一个执行环境。这里context被handle管理了，handle被上面说的handlescope管理。为什么要有context呢，因为JavaScript是非常动态的，每个JavaScript代码执行的全局对象和默认环境都可能不一样，比如一个程序修改一个全局对象，那么如果没有context的抽象，所以得JavaScript都得执行在全局对象被修改的环境中了。
+Stack-allocated class which sets the isolate for all operations executed within a local scope.
 
-当你创建了一个context后，你可以使用它很多次，当你在contextA的时候，你可以进入contextB，意思就是context是一个嵌套结构或者说是一个栈结构，退出ciontextB的时候又恢复成contextA。
+只能在栈上分配的类，声明了一个作用域，这个作用域从scope对象声明到scope对象被销毁，该作用域内的所有操作都是在该isolate中进行的。
 
-为什么要有handle呢，我们可以直接用指针持有context，原因是context中的对象和函数是由v8来管理的，而且v8可以移动他们，所以指针的地址会变，所以用handle来管理他们，增加了一层抽象，我们就不用管v8如何处理这些内存了。当handle释放的时候，v8可以自己帮我们销毁js对象。
+v8::HandleScope:
 
-Context::Scope: 进入Context
+A stack-allocated class that governs a number of local handles. After a handle scope has been created, all local handles will be allocated within that handle scope until either the handle scope is deleted or another handle scope is created. If there is already a handle scope and a new one is created, all allocations will take place in the new handle scope until it is deleted. After that, new handles will again be allocated in the original handle scope.
+
+After the handle scope of a local handle has been deleted the garbage collector will no longer track the object stored in the handle and may deallocate it. The behavior of accessing a handle for which the handle scope has been deleted is undefined.
+
+v8::Local:
+
+An object reference managed by the v8 garbage collector.
+
+All objects returned from v8 have to be tracked by the garbage collector so that it knows that the objects are still alive. Also, because the garbage collector may move objects, it is unsafe to point directly to an object. Instead, all objects are stored in handles which are known by the garbage collector and updated whenever an object moves. Handles should always be passed by value (except in cases like out-parameters) and they should never be allocated on the heap.
+
+There are two types of handles: local and persistent handles.
+
+Local handles are light-weight and transient and typically used in local operations. They are managed by HandleScopes. That means that a HandleScope must exist on the stack when they are created and that they are only valid inside of the HandleScope active during their creation. For passing a local handle to an outer HandleScope, an EscapableHandleScope and its Escape() method must be used.
+
+Persistent handles can be used when storing objects across several independent operations and have to be explicitly deallocated when they're no longer used.
+
+It is safe to extract the object stored in the handle by dereferencing the handle (for instance, to extract the Object* from a Local<Object>); the value will still be governed by a handle behind the scenes and the same rules apply to these values as to their handles.
+
+
+
+v8::Context:
+
+A sandboxed execution context with its own set of built-in objects and functions.
+
+v8::Context::Scope:
+
+Stack-allocated class which sets the execution context for all operations executed within a local scope.
