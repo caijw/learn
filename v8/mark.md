@@ -1,9 +1,3 @@
-- v8::ArrayBuffer::Allocator
-- Isolate::New(params)
-- Local<Message>
-
-
-
 v8::Isolate:
 
 Isolate represents an isolated instance of the V8 engine. V8 isolates have completely separate states. Objects from one isolate must not be used in other isolates. The embedder can create multiple isolates and use them in parallel in multiple threads. An isolate can be entered by at most one thread at any given time. The Locker/Unlocker API must be used to synchronize.
@@ -44,3 +38,35 @@ A sandboxed execution context with its own set of built-in objects and functions
 v8::Context::Scope:
 
 Stack-allocated class which sets the execution context for all operations executed within a local scope.
+
+v8::External:
+
+A JavaScript value that wraps a C++ void\*. This type of value is mainly used to associate C++ data structures with JavaScript objects.
+
+handle提供了c++访问js对象的能力，external提供了js访问c++对象的能力。
+
+external把一个c++对象作为void\*类型保存起来。
+
+The external object is simply a wrapper around a void\*. External objects can only be used to store reference values in internal fields. JavaScript objects can not have references to C++ objects directly so the external value is used as a "bridge" to go from JavaScript into C++. In that sense external values are the opposite of handles since handles lets C++ make references to JavaScript objects.
+
+
+Templates:
+
+A template is a blueprint for JavaScript functions and objects in a context. You can use a template to wrap C++ functions and data structures within JavaScript objects so that they can be manipulated by JavaScript scripts. For example, Google Chrome uses templates to wrap C++ DOM nodes as JavaScript objects and to install functions in the global namespace. You can create a set of templates and then use the same ones for every new context you make. You can have as many templates as you require. However you can only have one instance of any template in any given context.
+
+In JavaScript there is a strong duality between functions and objects. To create a new type of object in Java or C++ you would typically define a new class. In JavaScript you create a new function instead, and create instances using the function as a constructor. The layout and functionality of a JavaScript object is closely tied to the function that constructed it. This is reflected in the way V8 templates work. There are two types of templates: Function templates , Object templates
+
+templates提供了js操作和访问c++函数和数据结构的能力。
+
+v8::ObjectTemplate:
+
+Each function template has an associated object template. This is used to configure objects created with this function as their constructor. You can associate two types of C++ callbacks with object templates:
+
+- accessor callbacks are invoked when a specific object property is accessed by a script
+- interceptor callbacks are invoked when any object property is accessed by a script
+
+v8::FunctionTemplate:
+
+A function template is the blueprint for a single function. You create a JavaScript instance of the template by calling the template’s GetFunction method from within the context in which you wish to instantiate the JavaScript function. You can also associate a C++ callback with a function template which is called when the JavaScript function instance is invoked.
+
+
