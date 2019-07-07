@@ -1,7 +1,25 @@
 module.exports = {
   title: '编译原理',
   description: '编译原理实践',
-  head: [],
+  head: [
+    ['link', {
+      rel: 'stylesheet',
+      href: `/css/katex.min.css`
+    }],
+    ['link', {
+      rel: 'stylesheet',
+      href: `/css/github-markdown.css`
+    }],
+    ['link', {
+      rel: 'stylesheet',
+      href: 'https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css'
+    }],
+    ['link', {
+      rel: "stylesheet",
+      href: "https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/2.10.0/github-markdown.min.css"
+    }],
+
+  ],
   themeConfig: {
     navbar: false,
     sidebar: [
@@ -22,11 +40,18 @@ module.exports = {
         collapsable: true,
         children: [
           ['/02/01_basic', '基本概念'],
+          ['/02/02', '文法的定义'],
+          ['/02/03', '语言的定义'],
         ]
       }
-
-      
-      
-    ]
+    ],
+  },
+  markdown: {
+    config: md => {
+      md.set({
+        html: true
+      })
+      md.use(require("markdown-it-katex"))
+    }
   }
 }
