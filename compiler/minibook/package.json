@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "name": "minibook",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vuepress": "^1.0.2"
+  }
+}
