@@ -62,3 +62,15 @@ adb connect 远程连接 Android 设备
 ```
 adb shell 进入安卓手机shell界面
 ```
+
+```
+adb kill-server  终止adb服务进程
+```
+
+```
+adb start-server    重启adb服务进程
+```
+
+```
+
+```
