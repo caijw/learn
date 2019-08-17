@@ -1,6 +1,10 @@
-"use strict";
-exports.__esModule = true;
-var typescript_1 = require("typescript");
-var myName = 'Tom';
-console.log("My name is " + myName);
-console.log("version: " + typescript_1.version);
+function getCounter() {
+    var counter = function (start) { };
+    counter.interval = 123;
+    counter.reset = function () { };
+    return counter;
+}
+var c = getCounter();
+c(10);
+c.reset();
+c.interval = 5.0;

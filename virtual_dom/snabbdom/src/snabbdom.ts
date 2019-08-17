@@ -225,13 +225,16 @@ export function init(modules: Array<Partial<Module>>, domApi?: DOMAPI) {
         }
         idxInOld = oldKeyToIdx[newStartVnode.key as string];
         if (isUndef(idxInOld)) { // New element
+          /*插入新的元素，老的虚拟dom树不存在相关联的elm，不需要newStartVnode跟其他vnode做patchVnode*/
           api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue), oldStartVnode.elm as Node);
           newStartVnode = newCh[++newStartIdx];
         } else {
           elmToMove = oldCh[idxInOld];
           if (elmToMove.sel !== newStartVnode.sel) {
+            /*插入新的元素，老的虚拟dom树不存在相关联的elm，不需要newStartVnode跟其他vnode做patchVnode*/
             api.insertBefore(parentElm, createElm(newStartVnode, insertedVnodeQueue), oldStartVnode.elm as Node);
           } else {
+            /*newStartVnode和elmToMove需要做patchVnode，应为两个的elm是关联的，需要递归patchVnode*/
             patchVnode(elmToMove, newStartVnode, insertedVnodeQueue);
             oldCh[idxInOld] = undefined as any;
             api.insertBefore(parentElm, (elmToMove.elm as Node), oldStartVnode.elm as Node);
