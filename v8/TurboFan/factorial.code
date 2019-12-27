@@ -1,0 +1,891 @@
+--- Code ---
+kind = STUB
+major_key = StoreFastElementStub
+minor_key = 136
+name = StoreFastElementStub
+compiler = turbofan
+address = 0x174a4649c081
+Body (size = 452)
+Instructions (size = 428)
+0x174a4649c0c0     0  55             push rbp
+0x174a4649c0c1     1  4889e5         REX.W movq rbp,rsp
+0x174a4649c0c4     4  6a16           push 0x16
+0x174a4649c0c6     6  4883ec40       REX.W subq rsp,0x40
+0x174a4649c0ca     a  4c8b5a0f       REX.W movq r11,[rdx+0xf]
+0x174a4649c0ce     e  488955d8       REX.W movq [rbp-0x28],rdx
+0x174a4649c0d2    12  48894dd0       REX.W movq [rbp-0x30],rcx
+0x174a4649c0d6    16  4c8bc0         REX.W movq r8,rax
+0x174a4649c0d9    19  488945f0       REX.W movq [rbp-0x10],rax
+0x174a4649c0dd    1d  48897de8       REX.W movq [rbp-0x18],rdi
+0x174a4649c0e1    21  48895de0       REX.W movq [rbp-0x20],rbx
+0x174a4649c0e5    25  4c8bce         REX.W movq r9,rsi
+0x174a4649c0e8    28  488975c8       REX.W movq [rbp-0x38],rsi
+0x174a4649c0ec    2c  4c895db8       REX.W movq [rbp-0x48],r11
+0x174a4649c0f0    30  f6c101         testb rcx,0x1
+0x174a4649c0f3    33  0f8443000000   jz 0x174a4649c13c  <+0x7c>
+0x174a4649c0f9    39  488b41ff       REX.W movq rax,[rcx-0x1]
+0x174a4649c0fd    3d  49394550       REX.W cmpq [r13+0x50],rax
+0x174a4649c101    41  0f8408000000   jz 0x174a4649c10f  <+0x4f>
+0x174a4649c107    47  488bc2         REX.W movq rax,rdx
+0x174a4649c10a    4a  e901010000     jmp 0x174a4649c210  <+0x150>
+0x174a4649c10f    4f  c5fb104107     vmovsd xmm0,[rcx+0x7]
+0x174a4649c114    54  c5fb2cc0       vcvttsd2si rax,xmm0
+0x174a4649c118    58  c5f157c9       vxorpd xmm1,xmm1,xmm1
+0x174a4649c11c    5c  c5f32ac8       vcvtlsi2sd xmm1,xmm1,rax
+0x174a4649c120    60  c5f92ec8       vucomisd xmm1,xmm0
+0x174a4649c124    64  7a06           jpe 0x174a4649c12c  <+0x6c>
+0x174a4649c126    66  0f8408000000   jz 0x174a4649c134  <+0x74>
+0x174a4649c12c    6c  488bc2         REX.W movq rax,rdx
+0x174a4649c12f    6f  e9dc000000     jmp 0x174a4649c210  <+0x150>
+0x174a4649c134    74  4863c0         REX.W movsxlq rax,rax
+0x174a4649c137    77  e907000000     jmp 0x174a4649c143  <+0x83>
+0x174a4649c13c    7c  488bc1         REX.W movq rax,rcx
+0x174a4649c13f    7f  48c1f820       REX.W sarq rax, 32
+0x174a4649c143    83  4c8be0         REX.W movq r12,rax
+0x174a4649c146    86  48634233       REX.W movsxlq rax,[rdx+0x33]
+0x174a4649c14a    8a  4c8965c0       REX.W movq [rbp-0x40],r12
+0x174a4649c14e    8e  4c3be0         REX.W cmpq r12,rax
+0x174a4649c151    91  0f8208000000   jc 0x174a4649c15f  <+0x9f>
+0x174a4649c157    97  488bc2         REX.W movq rax,rdx
+0x174a4649c15a    9a  e9b1000000     jmp 0x174a4649c210  <+0x150>
+0x174a4649c15f    9f  498bc0         REX.W movq rax,r8
+0x174a4649c162    a2  6666660f1f840000000000 nop
+0x174a4649c16d    ad  0f1f00         nop
+0x174a4649c170    b0  a801           test al,0x1
+0x174a4649c172    b2  0f8459000000   jz 0x174a4649c1d1  <+0x111>
+0x174a4649c178    b8  488b70ff       REX.W movq rsi,[rax-0x1]
+0x174a4649c17c    bc  49397550       REX.W cmpq [r13+0x50],rsi
+0x174a4649c180    c0  0f843d000000   jz 0x174a4649c1c3  <+0x103>
+0x174a4649c186    c6  488b70ff       REX.W movq rsi,[rax-0x1]
+0x174a4649c18a    ca  66817e0b8300   cmpw [rsi+0xb],0x83
+0x174a4649c190    d0  0f842d000000   jz 0x174a4649c1c3  <+0x103>
+0x174a4649c196    d6  498bc0         REX.W movq rax,r8
+0x174a4649c199    d9  498bf1         REX.W movq rsi,r9
+0x174a4649c19c    dc  e8ff83f7ff     call 0x174a464145a0  (NonNumberToNumber)    ;; code: Builtin::NonNumberToNumber
+0x174a4649c1a1    e1  4c8b5db8       REX.W movq r11,[rbp-0x48]
+0x174a4649c1a5    e5  4c8b45f0       REX.W movq r8,[rbp-0x10]
+0x174a4649c1a9    e9  488b7de8       REX.W movq rdi,[rbp-0x18]
+0x174a4649c1ad    ed  488b5de0       REX.W movq rbx,[rbp-0x20]
+0x174a4649c1b1    f1  488b55d8       REX.W movq rdx,[rbp-0x28]
+0x174a4649c1b5    f5  488b4dd0       REX.W movq rcx,[rbp-0x30]
+0x174a4649c1b9    f9  4c8b4dc8       REX.W movq r9,[rbp-0x38]
+0x174a4649c1bd    fd  4c8b65c0       REX.W movq r12,[rbp-0x40]
+0x174a4649c1c1   101  ebad           jmp 0x174a4649c170  <+0xb0>
+0x174a4649c1c3   103  c5fb104007     vmovsd xmm0,[rax+0x7]
+0x174a4649c1c8   108  c5fb5ac0       vcvtsd2ss xmm0,xmm0,xmm0
+0x174a4649c1cc   10c  e90c000000     jmp 0x174a4649c1dd  <+0x11d>
+0x174a4649c1d1   111  48c1e820       REX.W shrq rax, 32
+0x174a4649c1d5   115  c5f857c0       vxorps xmm0,xmm0,xmm0
+0x174a4649c1d9   119  c5fa2ac0       vcvtlsi2ss xmm0,xmm0,rax
+0x174a4649c1dd   11d  488b45d8       REX.W movq rax,[rbp-0x28]
+0x174a4649c1e1   121  488b5817       REX.W movq rbx,[rax+0x17]
+0x174a4649c1e5   125  f6432708       testb [rbx+0x27],0x8
+0x174a4649c1e9   129  0f8521000000   jnz 0x174a4649c210  <+0x150>
+0x174a4649c1ef   12f  488b45b8       REX.W movq rax,[rbp-0x48]
+0x174a4649c1f3   133  488b5817       REX.W movq rbx,[rax+0x17]
+0x174a4649c1f7   137  488b400f       REX.W movq rax,[rax+0xf]
+0x174a4649c1fb   13b  4803c3         REX.W addq rax,rbx
+0x174a4649c1fe   13e  488b5dc0       REX.W movq rbx,[rbp-0x40]
+0x174a4649c202   142  f30f110498     movss [rax+rbx*4],xmm0
+0x174a4649c207   147  488b45f0       REX.W movq rax,[rbp-0x10]
+0x174a4649c20b   14b  488be5         REX.W movq rsp,rbp
+0x174a4649c20e   14e  5d             pop rbp
+0x174a4649c20f   14f  c3             retl
+0x174a4649c210   150  488b6d00       REX.W movq rbp,[rbp+0x0]
+0x174a4649c214   154  4c8b542428     REX.W movq r10,[rsp+0x28]
+0x174a4649c219   159  4c89542440     REX.W movq [rsp+0x40],r10
+0x174a4649c21e   15e  4c8b542450     REX.W movq r10,[rsp+0x50]
+0x174a4649c223   163  4c89542428     REX.W movq [rsp+0x28],r10
+0x174a4649c228   168  488b742410     REX.W movq rsi,[rsp+0x10]
+0x174a4649c22d   16d  4c8b542438     REX.W movq r10,[rsp+0x38]
+0x174a4649c232   172  4c89542450     REX.W movq [rsp+0x50],r10
+0x174a4649c237   177  4c8b542430     REX.W movq r10,[rsp+0x30]
+0x174a4649c23c   17c  4c89542448     REX.W movq [rsp+0x48],r10
+0x174a4649c241   181  4889442438     REX.W movq [rsp+0x38],rax
+0x174a4649c246   186  4c8b542418     REX.W movq r10,[rsp+0x18]
+0x174a4649c24b   18b  4c89542430     REX.W movq [rsp+0x30],r10
+0x174a4649c250   190  48bb709a5f0001000000 REX.W movq rbx,0x1005f9a70
+0x174a4649c25a   19a  b805000000     movl rax,0x5
+0x174a4649c25f   19f  4883c428       REX.W addq rsp,0x28
+0x174a4649c263   1a3  e978fbfbff     jmp 0x174a4645bde0  (CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit)    ;; code: Builtin::CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+0x174a4649c268   1a8  90             nop
+0x174a4649c269   1a9  0f1f00         nop
+
+
+Safepoints (size = 24)
+0x174a4649c1a1      e1    NA  10111101000 (sp -> fp)  <none>
+
+RelocInfo (size = 6)
+0x174a4649c19d  code target (BUILTIN NonNumberToNumber)  (0x174a464145a0)
+0x174a4649c264  code target (BUILTIN CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit)  (0x174a4645bde0)
+
+--- End code ---
+--- Code ---
+kind = STUB
+major_key = StoreFastElementStub
+minor_key = 120
+name = StoreFastElementStub
+compiler = turbofan
+address = 0x174a4649e641
+Body (size = 480)
+Instructions (size = 456)
+0x174a4649e680     0  55             push rbp
+0x174a4649e681     1  4889e5         REX.W movq rbp,rsp
+0x174a4649e684     4  6a16           push 0x16
+0x174a4649e686     6  4883ec40       REX.W subq rsp,0x40
+0x174a4649e68a     a  4c8b5a0f       REX.W movq r11,[rdx+0xf]
+0x174a4649e68e     e  488955d8       REX.W movq [rbp-0x28],rdx
+0x174a4649e692    12  48894dd0       REX.W movq [rbp-0x30],rcx
+0x174a4649e696    16  4c8bc0         REX.W movq r8,rax
+0x174a4649e699    19  488945f0       REX.W movq [rbp-0x10],rax
+0x174a4649e69d    1d  48897de8       REX.W movq [rbp-0x18],rdi
+0x174a4649e6a1    21  48895de0       REX.W movq [rbp-0x20],rbx
+0x174a4649e6a5    25  4c8bce         REX.W movq r9,rsi
+0x174a4649e6a8    28  488975c8       REX.W movq [rbp-0x38],rsi
+0x174a4649e6ac    2c  4c895db8       REX.W movq [rbp-0x48],r11
+0x174a4649e6b0    30  f6c101         testb rcx,0x1
+0x174a4649e6b3    33  0f8443000000   jz 0x174a4649e6fc  <+0x7c>
+0x174a4649e6b9    39  488b41ff       REX.W movq rax,[rcx-0x1]
+0x174a4649e6bd    3d  49394550       REX.W cmpq [r13+0x50],rax
+0x174a4649e6c1    41  0f8408000000   jz 0x174a4649e6cf  <+0x4f>
+0x174a4649e6c7    47  488bda         REX.W movq rbx,rdx
+0x174a4649e6ca    4a  e904010000     jmp 0x174a4649e7d3  <+0x153>
+0x174a4649e6cf    4f  c5fb104107     vmovsd xmm0,[rcx+0x7]
+0x174a4649e6d4    54  c5fb2cc0       vcvttsd2si rax,xmm0
+0x174a4649e6d8    58  c5f157c9       vxorpd xmm1,xmm1,xmm1
+0x174a4649e6dc    5c  c5f32ac8       vcvtlsi2sd xmm1,xmm1,rax
+0x174a4649e6e0    60  c5f92ec8       vucomisd xmm1,xmm0
+0x174a4649e6e4    64  7a06           jpe 0x174a4649e6ec  <+0x6c>
+0x174a4649e6e6    66  0f8408000000   jz 0x174a4649e6f4  <+0x74>
+0x174a4649e6ec    6c  488bda         REX.W movq rbx,rdx
+0x174a4649e6ef    6f  e9df000000     jmp 0x174a4649e7d3  <+0x153>
+0x174a4649e6f4    74  4863c0         REX.W movsxlq rax,rax
+0x174a4649e6f7    77  e907000000     jmp 0x174a4649e703  <+0x83>
+0x174a4649e6fc    7c  488bc1         REX.W movq rax,rcx
+0x174a4649e6ff    7f  48c1f820       REX.W sarq rax, 32
+0x174a4649e703    83  4c8be0         REX.W movq r12,rax
+0x174a4649e706    86  48634233       REX.W movsxlq rax,[rdx+0x33]
+0x174a4649e70a    8a  4c8965c0       REX.W movq [rbp-0x40],r12
+0x174a4649e70e    8e  4c3be0         REX.W cmpq r12,rax
+0x174a4649e711    91  0f8208000000   jc 0x174a4649e71f  <+0x9f>
+0x174a4649e717    97  488bda         REX.W movq rbx,rdx
+0x174a4649e71a    9a  e9b4000000     jmp 0x174a4649e7d3  <+0x153>
+0x174a4649e71f    9f  498bc0         REX.W movq rax,r8
+0x174a4649e722    a2  6666660f1f840000000000 nop
+0x174a4649e72d    ad  0f1f00         nop
+0x174a4649e730    b0  a801           test al,0x1
+0x174a4649e732    b2  0f8466000000   jz 0x174a4649e79e  <+0x11e>
+0x174a4649e738    b8  488b70ff       REX.W movq rsi,[rax-0x1]
+0x174a4649e73c    bc  49397550       REX.W cmpq [r13+0x50],rsi
+0x174a4649e740    c0  0f843d000000   jz 0x174a4649e783  <+0x103>
+0x174a4649e746    c6  488b70ff       REX.W movq rsi,[rax-0x1]
+0x174a4649e74a    ca  66817e0b8300   cmpw [rsi+0xb],0x83
+0x174a4649e750    d0  0f842d000000   jz 0x174a4649e783  <+0x103>
+0x174a4649e756    d6  498bc0         REX.W movq rax,r8
+0x174a4649e759    d9  498bf1         REX.W movq rsi,r9
+0x174a4649e75c    dc  e83f5ef7ff     call 0x174a464145a0  (NonNumberToNumber)    ;; code: Builtin::NonNumberToNumber
+0x174a4649e761    e1  4c8b5db8       REX.W movq r11,[rbp-0x48]
+0x174a4649e765    e5  4c8b45f0       REX.W movq r8,[rbp-0x10]
+0x174a4649e769    e9  488b7de8       REX.W movq rdi,[rbp-0x18]
+0x174a4649e76d    ed  488b5de0       REX.W movq rbx,[rbp-0x20]
+0x174a4649e771    f1  488b55d8       REX.W movq rdx,[rbp-0x28]
+0x174a4649e775    f5  488b4dd0       REX.W movq rcx,[rbp-0x30]
+0x174a4649e779    f9  4c8b4dc8       REX.W movq r9,[rbp-0x38]
+0x174a4649e77d    fd  4c8b65c0       REX.W movq r12,[rbp-0x40]
+0x174a4649e781   101  ebad           jmp 0x174a4649e730  <+0xb0>
+0x174a4649e783   103  c5fb104007     vmovsd xmm0,[rax+0x7]
+0x174a4649e788   108  c4e1fb2cc0     vcvttsd2siq rax,xmm0
+0x174a4649e78d   10d  4883f801       REX.W cmpq rax,0x1
+0x174a4649e791   111  0f8094000000   jo 0x174a4649e82b  <+0x1ab>
+0x174a4649e797   117  8bc0           movl rax,rax
+0x174a4649e799   119  e904000000     jmp 0x174a4649e7a2  <+0x122>
+0x174a4649e79e   11e  48c1e820       REX.W shrq rax, 32
+0x174a4649e7a2   122  488b5dd8       REX.W movq rbx,[rbp-0x28]
+0x174a4649e7a6   126  488b5317       REX.W movq rdx,[rbx+0x17]
+0x174a4649e7aa   12a  f6422708       testb [rdx+0x27],0x8
+0x174a4649e7ae   12e  0f851f000000   jnz 0x174a4649e7d3  <+0x153>
+0x174a4649e7b4   134  488b5db8       REX.W movq rbx,[rbp-0x48]
+0x174a4649e7b8   138  488b5317       REX.W movq rdx,[rbx+0x17]
+0x174a4649e7bc   13c  488b5b0f       REX.W movq rbx,[rbx+0xf]
+0x174a4649e7c0   140  4803da         REX.W addq rbx,rdx
+0x174a4649e7c3   143  488b55c0       REX.W movq rdx,[rbp-0x40]
+0x174a4649e7c7   147  890493         movl [rbx+rdx*4],rax
+0x174a4649e7ca   14a  488b45f0       REX.W movq rax,[rbp-0x10]
+0x174a4649e7ce   14e  488be5         REX.W movq rsp,rbp
+0x174a4649e7d1   151  5d             pop rbp
+0x174a4649e7d2   152  c3             retl
+0x174a4649e7d3   153  488b6d00       REX.W movq rbp,[rbp+0x0]
+0x174a4649e7d7   157  4c8b542428     REX.W movq r10,[rsp+0x28]
+0x174a4649e7dc   15c  4c89542440     REX.W movq [rsp+0x40],r10
+0x174a4649e7e1   161  4c8b542450     REX.W movq r10,[rsp+0x50]
+0x174a4649e7e6   166  4c89542428     REX.W movq [rsp+0x28],r10
+0x174a4649e7eb   16b  b805000000     movl rax,0x5
+0x174a4649e7f0   170  4c8b542438     REX.W movq r10,[rsp+0x38]
+0x174a4649e7f5   175  4c89542450     REX.W movq [rsp+0x50],r10
+0x174a4649e7fa   17a  4c8b542430     REX.W movq r10,[rsp+0x30]
+0x174a4649e7ff   17f  4c89542448     REX.W movq [rsp+0x48],r10
+0x174a4649e804   184  48895c2438     REX.W movq [rsp+0x38],rbx
+0x174a4649e809   189  4c8b542418     REX.W movq r10,[rsp+0x18]
+0x174a4649e80e   18e  4c89542430     REX.W movq [rsp+0x30],r10
+0x174a4649e813   193  48bb709a5f0001000000 REX.W movq rbx,0x1005f9a70
+0x174a4649e81d   19d  488b742410     REX.W movq rsi,[rsp+0x10]
+0x174a4649e822   1a2  4883c428       REX.W addq rsp,0x28
+0x174a4649e826   1a6  e9b5d5fbff     jmp 0x174a4645bde0  (CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit)    ;; code: Builtin::CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+0x174a4649e82b   1ab  4883ec08       REX.W subq rsp,0x8
+0x174a4649e82f   1af  c5fb110424     vmovsd [rsp],xmm0
+0x174a4649e834   1b4  e847fafbff     call 0x174a4645e280  (DoubleToI)    ;; code: Builtin::DoubleToI
+0x174a4649e839   1b9  8b0424         movl rax,[rsp]
+0x174a4649e83c   1bc  4883c408       REX.W addq rsp,0x8
+0x174a4649e840   1c0  e952ffffff     jmp 0x174a4649e797  <+0x117>
+0x174a4649e845   1c5  90             nop
+0x174a4649e846   1c6  6690           nop
+
+
+Safepoints (size = 24)
+0x174a4649e761      e1    NA  10111101000 (sp -> fp)  <none>
+
+RelocInfo (size = 7)
+0x174a4649e75d  code target (BUILTIN NonNumberToNumber)  (0x174a464145a0)
+0x174a4649e827  code target (BUILTIN CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit)  (0x174a4645bde0)
+0x174a4649e835  code target (BUILTIN DoubleToI)  (0x174a4645e280)
+
+--- End code ---
+kind = REGEXP
+name = ^$
+compiler = unknown
+address = 0x174a4649f5a1
+Body (size = 645)
+Instructions (size = 645)
+0x174a4649f5e0     0  e9b7000000     jmp 0x174a4649f69c  <+0xbc>
+0x174a4649f5e5     5  4883e904       REX.W subq rcx,0x4
+0x174a4649f5e9     9  c701f4000000   movl [rcx],0xf4
+0x174a4649f5ef     f  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a4649f5f9    19  483bc8         REX.W cmpq rcx,rax
+0x174a4649f5fc    1c  0f8705000000   ja 0x174a4649f607  <+0x27>
+0x174a4649f602    22  e8ff010000     call 0x174a4649f806  <+0x226>
+0x174a4649f607    27  488d47ff       REX.W leaq rax,[rdi-0x1]
+0x174a4649f60b    2b  483b45b8       REX.W cmpq rax,[rbp-0x48]
+0x174a4649f60f    2f  0f8583010000   jnz 0x174a4649f798  <+0x1b8>
+0x174a4649f615    35  83ff00         cmpl rdi,0x0
+0x174a4649f618    38  0f8d24000000   jge 0x174a4649f642  <+0x62>
+0x174a4649f61e    3e  48a16808690201000000 REX.W movq rax,(0x102690868)
+0x174a4649f628    48  483be0         REX.W cmpq rsp,rax
+0x174a4649f62b    4b  0f8705000000   ja 0x174a4649f636  <+0x56>
+0x174a4649f631    51  e886010000     call 0x174a4649f7bc  <+0x1dc>
+0x174a4649f636    56  486319         REX.W movsxlq rbx,[rcx]
+0x174a4649f639    59  4883c104       REX.W addq rcx,0x4
+0x174a4649f63d    5d  4903d8         REX.W addq rbx,r8
+0x174a4649f640    60  ffe3           jmp rbx
+0x174a4649f642    62  48897db0       REX.W movq [rbp-0x50],rdi
+0x174a4649f646    66  48897da8       REX.W movq [rbp-0x58],rdi
+0x174a4649f64a    6a  4883e904       REX.W subq rcx,0x4
+0x174a4649f64e    6e  c701d0000000   movl [rcx],0xd0
+0x174a4649f654    74  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a4649f65e    7e  483bc8         REX.W cmpq rcx,rax
+0x174a4649f661    81  0f8705000000   ja 0x174a4649f66c  <+0x8c>
+0x174a4649f667    87  e89a010000     call 0x174a4649f806  <+0x226>
+0x174a4649f66c    8c  e9f1000000     jmp 0x174a4649f762  <+0x182>
+0x174a4649f671    91  48a16808690201000000 REX.W movq rax,(0x102690868)
+0x174a4649f67b    9b  483be0         REX.W cmpq rsp,rax
+0x174a4649f67e    9e  0f8705000000   ja 0x174a4649f689  <+0xa9>
+0x174a4649f684    a4  e833010000     call 0x174a4649f7bc  <+0x1dc>
+0x174a4649f689    a9  486319         REX.W movsxlq rbx,[rcx]
+0x174a4649f68c    ac  4883c104       REX.W addq rcx,0x4
+0x174a4649f690    b0  4903d8         REX.W addq rbx,r8
+0x174a4649f693    b3  ffe3           jmp rbx
+0x174a4649f695    b5  33c0           xorl rax,rax
+0x174a4649f697    b7  e9f3000000     jmp 0x174a4649f78f  <+0x1af>
+0x174a4649f69c    bc  55             push rbp
+0x174a4649f69d    bd  4889e5         REX.W movq rbp,rsp
+0x174a4649f6a0    c0  57             push rdi
+0x174a4649f6a1    c1  56             push rsi
+0x174a4649f6a2    c2  52             push rdx
+0x174a4649f6a3    c3  51             push rcx
+0x174a4649f6a4    c4  4150           push r8
+0x174a4649f6a6    c6  4151           push r9
+0x174a4649f6a8    c8  53             push rbx
+0x174a4649f6a9    c9  6a00           push 0x0
+0x174a4649f6ab    cb  6a00           push 0x0
+0x174a4649f6ad    cd  4889e1         REX.W movq rcx,rsp
+0x174a4649f6b0    d0  49ba6808690201000000 REX.W movq r10,0x102690868
+0x174a4649f6ba    da  492b0a         REX.W subq rcx,[r10]
+0x174a4649f6bd    dd  0f8616000000   jna 0x174a4649f6d9  <+0xf9>
+0x174a4649f6c3    e3  4883f910       REX.W cmpq rcx,0x10
+0x174a4649f6c7    e7  0f8349000000   jnc 0x174a4649f716  <+0x136>
+0x174a4649f6cd    ed  48c7c0ffffffff REX.W movq rax,0xffffffff
+0x174a4649f6d4    f4  e9b6000000     jmp 0x174a4649f78f  <+0x1af>
+0x174a4649f6d9    f9  49b8a1f549464a170000 REX.W movq r8,0x174a4649f5a1    ;; object: 0x174a4649f5a1 <Code REGEXP>
+0x174a4649f6e3   103  4989e2         REX.W movq r10,rsp
+0x174a4649f6e6   106  4883ec08       REX.W subq rsp,0x8
+0x174a4649f6ea   10a  4883e4f0       REX.W andq rsp,0xf0
+0x174a4649f6ee   10e  4c891424       REX.W movq [rsp],r10
+0x174a4649f6f2   112  488bd5         REX.W movq rdx,rbp
+0x174a4649f6f5   115  498bf0         REX.W movq rsi,r8
+0x174a4649f6f8   118  488d7c24f8     REX.W leaq rdi,[rsp-0x8]
+0x174a4649f6fd   11d  48b8b02e930001000000 REX.W movq rax,0x100932eb0
+0x174a4649f707   127  ffd0           call rax
+0x174a4649f709   129  488b2424       REX.W movq rsp,[rsp]
+0x174a4649f70d   12d  4885c0         REX.W testq rax,rax
+0x174a4649f710   130  0f8579000000   jnz 0x174a4649f78f  <+0x1af>
+0x174a4649f716   136  4883ec10       REX.W subq rsp,0x10
+0x174a4649f71a   13a  488b75e0       REX.W movq rsi,[rbp-0x20]
+0x174a4649f71e   13e  488b7de8       REX.W movq rdi,[rbp-0x18]
+0x174a4649f722   142  482bfe         REX.W subq rdi,rsi
+0x174a4649f725   145  488b5df0       REX.W movq rbx,[rbp-0x10]
+0x174a4649f729   149  48f7db         REX.W negq rbx
+0x174a4649f72c   14c  488d441fff     REX.W leaq rax,[rdi+rbx*1-0x1]
+0x174a4649f731   151  488945b8       REX.W movq [rbp-0x48],rax
+0x174a4649f735   155  49b8a1f549464a170000 REX.W movq r8,0x174a4649f5a1    ;; object: 0x174a4649f5a1 <Code REGEXP>
+0x174a4649f73f   15f  837df000       cmpl [rbp-0x10],0x0
+0x174a4649f743   163  7507           jnz 0x174a4649f74c  <+0x16c>
+0x174a4649f745   165  ba0a000000     movl rdx,0xa
+0x174a4649f74a   16a  eb05           jmp 0x174a4649f751  <+0x171>
+0x174a4649f74c   16c  0fb6543eff     movzxbl rdx,[rsi+rdi*1-0x1]
+0x174a4649f751   171  488945b0       REX.W movq [rbp-0x50],rax
+0x174a4649f755   175  488945a8       REX.W movq [rbp-0x58],rax
+0x174a4649f759   179  488b4d10       REX.W movq rcx,[rbp+0x10]
+0x174a4649f75d   17d  e983feffff     jmp 0x174a4649f5e5  <+0x5>
+0x174a4649f762   182  488b55f0       REX.W movq rdx,[rbp-0x10]
+0x174a4649f766   186  488b5dd8       REX.W movq rbx,[rbp-0x28]
+0x174a4649f76a   18a  488b4de0       REX.W movq rcx,[rbp-0x20]
+0x174a4649f76e   18e  482b4de8       REX.W subq rcx,[rbp-0x18]
+0x174a4649f772   192  4803ca         REX.W addq rcx,rdx
+0x174a4649f775   195  488b45b0       REX.W movq rax,[rbp-0x50]
+0x174a4649f779   199  4803c1         REX.W addq rax,rcx
+0x174a4649f77c   19c  8903           movl [rbx],rax
+0x174a4649f77e   19e  488b45a8       REX.W movq rax,[rbp-0x58]
+0x174a4649f782   1a2  4803c1         REX.W addq rax,rcx
+0x174a4649f785   1a5  894304         movl [rbx+0x4],rax
+0x174a4649f788   1a8  48c7c001000000 REX.W movq rax,0x1
+0x174a4649f78f   1af  488b5dc8       REX.W movq rbx,[rbp-0x38]
+0x174a4649f793   1b3  488be5         REX.W movq rsp,rbp
+0x174a4649f796   1b6  5d             pop rbp
+0x174a4649f797   1b7  c3             retl
+0x174a4649f798   1b8  48a16808690201000000 REX.W movq rax,(0x102690868)
+0x174a4649f7a2   1c2  483be0         REX.W cmpq rsp,rax
+0x174a4649f7a5   1c5  0f8705000000   ja 0x174a4649f7b0  <+0x1d0>
+0x174a4649f7ab   1cb  e80c000000     call 0x174a4649f7bc  <+0x1dc>
+0x174a4649f7b0   1d0  486319         REX.W movsxlq rbx,[rcx]
+0x174a4649f7b3   1d3  4883c104       REX.W addq rcx,0x4
+0x174a4649f7b7   1d7  4903d8         REX.W addq rbx,r8
+0x174a4649f7ba   1da  ffe3           jmp rbx
+0x174a4649f7bc   1dc  4c290424       REX.W subq [rsp],r8
+0x174a4649f7c0   1e0  51             push rcx
+0x174a4649f7c1   1e1  57             push rdi
+0x174a4649f7c2   1e2  4989e2         REX.W movq r10,rsp
+0x174a4649f7c5   1e5  4883ec08       REX.W subq rsp,0x8
+0x174a4649f7c9   1e9  4883e4f0       REX.W andq rsp,0xf0
+0x174a4649f7cd   1ed  4c891424       REX.W movq [rsp],r10
+0x174a4649f7d1   1f1  488bd5         REX.W movq rdx,rbp
+0x174a4649f7d4   1f4  498bf0         REX.W movq rsi,r8
+0x174a4649f7d7   1f7  488d7c24f8     REX.W leaq rdi,[rsp-0x8]
+0x174a4649f7dc   1fc  48b8b02e930001000000 REX.W movq rax,0x100932eb0
+0x174a4649f7e6   206  ffd0           call rax
+0x174a4649f7e8   208  488b2424       REX.W movq rsp,[rsp]
+0x174a4649f7ec   20c  4885c0         REX.W testq rax,rax
+0x174a4649f7ef   20f  759e           jnz 0x174a4649f78f  <+0x1af>
+0x174a4649f7f1   211  49b8a1f549464a170000 REX.W movq r8,0x174a4649f5a1    ;; object: 0x174a4649f5a1 <Code REGEXP>
+0x174a4649f7fb   21b  5f             pop rdi
+0x174a4649f7fc   21c  59             pop rcx
+0x174a4649f7fd   21d  488b75e0       REX.W movq rsi,[rbp-0x20]
+0x174a4649f801   221  4c010424       REX.W addq [rsp],r8
+0x174a4649f805   225  c3             retl
+0x174a4649f806   226  4c290424       REX.W subq [rsp],r8
+0x174a4649f80a   22a  56             push rsi
+0x174a4649f80b   22b  57             push rdi
+0x174a4649f80c   22c  4989e2         REX.W movq r10,rsp
+0x174a4649f80f   22f  4883ec08       REX.W subq rsp,0x8
+0x174a4649f813   233  4883e4f0       REX.W andq rsp,0xf0
+0x174a4649f817   237  4c891424       REX.W movq [rsp],r10
+0x174a4649f81b   23b  488bf9         REX.W movq rdi,rcx
+0x174a4649f81e   23e  488d7510       REX.W leaq rsi,[rbp+0x10]
+0x174a4649f822   242  48ba00b0680201000000 REX.W movq rdx,0x10268b000
+0x174a4649f82c   24c  48b8c05d780001000000 REX.W movq rax,0x100785dc0
+0x174a4649f836   256  ffd0           call rax
+0x174a4649f838   258  488b2424       REX.W movq rsp,[rsp]
+0x174a4649f83c   25c  4885c0         REX.W testq rax,rax
+0x174a4649f83f   25f  0f8414000000   jz 0x174a4649f859  <+0x279>
+0x174a4649f845   265  488bc8         REX.W movq rcx,rax
+0x174a4649f848   268  49b8a1f549464a170000 REX.W movq r8,0x174a4649f5a1    ;; object: 0x174a4649f5a1 <Code REGEXP>
+0x174a4649f852   272  5f             pop rdi
+0x174a4649f853   273  5e             pop rsi
+0x174a4649f854   274  4c010424       REX.W addq [rsp],r8
+0x174a4649f858   278  c3             retl
+0x174a4649f859   279  48c7c0ffffffff REX.W movq rax,0xffffffff
+0x174a4649f860   280  e92affffff     jmp 0x174a4649f78f  <+0x1af>
+
+
+RelocInfo (size = 12)
+0x174a4649f6db  embedded object  (0x174a4649f5a1 <Code REGEXP>)
+0x174a4649f737  embedded object  (0x174a4649f5a1 <Code REGEXP>)
+0x174a4649f7f3  embedded object  (0x174a4649f5a1 <Code REGEXP>)
+0x174a4649f84a  embedded object  (0x174a4649f5a1 <Code REGEXP>)
+
+kind = REGEXP
+name = (?:^|\/)\.?\.$
+compiler = unknown
+address = 0x174a464ac5a1
+Body (size = 1376)
+Instructions (size = 1376)
+0x174a464ac5e0     0  e992030000     jmp 0x174a464ac977  <+0x397>
+0x174a464ac5e5     5  4883fffd       REX.W cmpq rdi,0xfd
+0x174a464ac5e9     9  7d0c           jge 0x174a464ac5f7  <+0x17>
+0x174a464ac5eb     b  48c7c7fdffffff REX.W movq rdi,0xfffffffd
+0x174a464ac5f2    12  0fb6543eff     movzxbl rdx,[rsi+rdi*1-0x1]
+0x174a464ac5f7    17  4883e904       REX.W subq rcx,0x4
+0x174a464ac5fb    1b  c701cf030000   movl [rcx],0x3cf
+0x174a464ac601    21  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a464ac60b    2b  483bc8         REX.W cmpq rcx,rax
+0x174a464ac60e    2e  0f8705000000   ja 0x174a464ac619  <+0x39>
+0x174a464ac614    34  e8c8040000     call 0x174a464acae1  <+0x501>
+0x174a464ac619    39  83ff00         cmpl rdi,0x0
+0x174a464ac61c    3c  0f8d51040000   jge 0x174a464aca73  <+0x493>
+0x174a464ac622    42  0fb6143e       movzxbl rdx,[rsi+rdi*1]
+0x174a464ac626    46  b8fe000000     movl rax,0xfe
+0x174a464ac62b    4b  4823c2         REX.W andq rax,rdx
+0x174a464ac62e    4e  83f82e         cmpl rax,0x2e
+0x174a464ac631    51  0f8441010000   jz 0x174a464ac778  <+0x198>
+0x174a464ac637    57  4883c701       REX.W addq rdi,0x1
+0x174a464ac63b    5b  83ff00         cmpl rdi,0x0
+0x174a464ac63e    5e  0f8d26000000   jge 0x174a464ac66a  <+0x8a>
+0x174a464ac644    64  0fb6143e       movzxbl rdx,[rsi+rdi*1]
+0x174a464ac648    68  48b8c93955aa750f0000 REX.W movq rax,0xf75aa5539c9    ;; object: 0x0f75aa5539c9 <ByteArray[128]>
+0x174a464ac652    72  488bda         REX.W movq rbx,rdx
+0x174a464ac655    75  4883e37f       REX.W andq rbx,0x7f
+0x174a464ac659    79  807c180f00     cmpb [rax+rbx*1+0xf],0x0
+0x174a464ac65e    7e  0f8506000000   jnz 0x174a464ac66a  <+0x8a>
+0x174a464ac664    84  4883c701       REX.W addq rdi,0x1
+0x174a464ac668    88  ebd1           jmp 0x174a464ac63b  <+0x5b>
+0x174a464ac66a    8a  83ff00         cmpl rdi,0x0
+0x174a464ac66d    8d  0f8d00040000   jge 0x174a464aca73  <+0x493>
+0x174a464ac673    93  0fb6143e       movzxbl rdx,[rsi+rdi*1]
+0x174a464ac677    97  83fa2f         cmpl rdx,0x2f
+0x174a464ac67a    9a  0f8406000000   jz 0x174a464ac686  <+0xa6>
+0x174a464ac680    a0  4883c701       REX.W addq rdi,0x1
+0x174a464ac684    a4  ebb5           jmp 0x174a464ac63b  <+0x5b>
+0x174a464ac686    a6  83ffff         cmpl rdi,0xff
+0x174a464ac689    a9  7df5           jge 0x174a464ac680  <+0xa0>
+0x174a464ac68b    ab  0fb7143e       movzxwl rdx,[rsi+rdi*1]
+0x174a464ac68f    af  81fa2f2e0000   cmpl rdx,0x2e2f
+0x174a464ac695    b5  75e9           jnz 0x174a464ac680  <+0xa0>
+0x174a464ac697    b7  83ffff         cmpl rdi,0xff
+0x174a464ac69a    ba  7de4           jge 0x174a464ac680  <+0xa0>
+0x174a464ac69c    bc  0fb6543e01     movzxbl rdx,[rsi+rdi*1+0x1]
+0x174a464ac6a1    c1  83fa2e         cmpl rdx,0x2e
+0x174a464ac6a4    c4  0f8456000000   jz 0x174a464ac700  <+0x120>
+0x174a464ac6aa    ca  83fa2e         cmpl rdx,0x2e
+0x174a464ac6ad    cd  75d1           jnz 0x174a464ac680  <+0xa0>
+0x174a464ac6af    cf  83fffe         cmpl rdi,0xfe
+0x174a464ac6b2    d2  0f8d02000000   jge 0x174a464ac6ba  <+0xda>
+0x174a464ac6b8    d8  ebc6           jmp 0x174a464ac680  <+0xa0>
+0x174a464ac6ba    da  4883e904       REX.W subq rcx,0x4
+0x174a464ac6be    de  8939           movl [rcx],rdi
+0x174a464ac6c0    e0  48897db0       REX.W movq [rbp-0x50],rdi
+0x174a464ac6c4    e4  488d4702       REX.W leaq rax,[rdi+0x2]
+0x174a464ac6c8    e8  488945a8       REX.W movq [rbp-0x58],rax
+0x174a464ac6cc    ec  4883c702       REX.W addq rdi,0x2
+0x174a464ac6d0    f0  4883e904       REX.W subq rcx,0x4
+0x174a464ac6d4    f4  c70156010000   movl [rcx],0x156
+0x174a464ac6da    fa  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a464ac6e4   104  483bc8         REX.W cmpq rcx,rax
+0x174a464ac6e7   107  0f8705000000   ja 0x174a464ac6f2  <+0x112>
+0x174a464ac6ed   10d  e8ef030000     call 0x174a464acae1  <+0x501>
+0x174a464ac6f2   112  e946030000     jmp 0x174a464aca3d  <+0x45d>
+0x174a464ac6f7   117  486339         REX.W movsxlq rdi,[rcx]
+0x174a464ac6fa   11a  4883c104       REX.W addq rcx,0x4
+0x174a464ac6fe   11e  eb80           jmp 0x174a464ac680  <+0xa0>
+0x174a464ac700   120  83fffe         cmpl rdi,0xfe
+0x174a464ac703   123  0f8d65000000   jge 0x174a464ac76e  <+0x18e>
+0x174a464ac709   129  0fb6543e02     movzxbl rdx,[rsi+rdi*1+0x2]
+0x174a464ac70e   12e  83fa2e         cmpl rdx,0x2e
+0x174a464ac711   131  0f8557000000   jnz 0x174a464ac76e  <+0x18e>
+0x174a464ac717   137  83fffd         cmpl rdi,0xfd
+0x174a464ac71a   13a  0f8d05000000   jge 0x174a464ac725  <+0x145>
+0x174a464ac720   140  e949000000     jmp 0x174a464ac76e  <+0x18e>
+0x174a464ac725   145  4883e904       REX.W subq rcx,0x4
+0x174a464ac729   149  8939           movl [rcx],rdi
+0x174a464ac72b   14b  48897db0       REX.W movq [rbp-0x50],rdi
+0x174a464ac72f   14f  488d4703       REX.W leaq rax,[rdi+0x3]
+0x174a464ac733   153  488945a8       REX.W movq [rbp-0x58],rax
+0x174a464ac737   157  4883c703       REX.W addq rdi,0x3
+0x174a464ac73b   15b  4883e904       REX.W subq rcx,0x4
+0x174a464ac73f   15f  c701c1010000   movl [rcx],0x1c1
+0x174a464ac745   165  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a464ac74f   16f  483bc8         REX.W cmpq rcx,rax
+0x174a464ac752   172  0f8705000000   ja 0x174a464ac75d  <+0x17d>
+0x174a464ac758   178  e884030000     call 0x174a464acae1  <+0x501>
+0x174a464ac75d   17d  e9db020000     jmp 0x174a464aca3d  <+0x45d>
+0x174a464ac762   182  486339         REX.W movsxlq rdi,[rcx]
+0x174a464ac765   185  4883c104       REX.W addq rcx,0x4
+0x174a464ac769   189  e900000000     jmp 0x174a464ac76e  <+0x18e>
+0x174a464ac76e   18e  0fb6543e01     movzxbl rdx,[rsi+rdi*1+0x1]
+0x174a464ac773   193  e932ffffff     jmp 0x174a464ac6aa  <+0xca>
+0x174a464ac778   198  83fa2e         cmpl rdx,0x2e
+0x174a464ac77b   19b  0f84f8000000   jz 0x174a464ac879  <+0x299>
+0x174a464ac781   1a1  83fa2f         cmpl rdx,0x2f
+0x174a464ac784   1a4  0f85adfeffff   jnz 0x174a464ac637  <+0x57>
+0x174a464ac78a   1aa  83ffff         cmpl rdi,0xff
+0x174a464ac78d   1ad  0f8da4feffff   jge 0x174a464ac637  <+0x57>
+0x174a464ac793   1b3  0fb6543e01     movzxbl rdx,[rsi+rdi*1+0x1]
+0x174a464ac798   1b8  83fa2e         cmpl rdx,0x2e
+0x174a464ac79b   1bb  0f8460000000   jz 0x174a464ac801  <+0x221>
+0x174a464ac7a1   1c1  83fa2e         cmpl rdx,0x2e
+0x174a464ac7a4   1c4  0f858dfeffff   jnz 0x174a464ac637  <+0x57>
+0x174a464ac7aa   1ca  83fffe         cmpl rdi,0xfe
+0x174a464ac7ad   1cd  0f8d05000000   jge 0x174a464ac7b8  <+0x1d8>
+0x174a464ac7b3   1d3  e97ffeffff     jmp 0x174a464ac637  <+0x57>
+0x174a464ac7b8   1d8  4883e904       REX.W subq rcx,0x4
+0x174a464ac7bc   1dc  8939           movl [rcx],rdi
+0x174a464ac7be   1de  48897db0       REX.W movq [rbp-0x50],rdi
+0x174a464ac7c2   1e2  488d4702       REX.W leaq rax,[rdi+0x2]
+0x174a464ac7c6   1e6  488945a8       REX.W movq [rbp-0x58],rax
+0x174a464ac7ca   1ea  4883c702       REX.W addq rdi,0x2
+0x174a464ac7ce   1ee  4883e904       REX.W subq rcx,0x4
+0x174a464ac7d2   1f2  c70154020000   movl [rcx],0x254
+0x174a464ac7d8   1f8  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a464ac7e2   202  483bc8         REX.W cmpq rcx,rax
+0x174a464ac7e5   205  0f8705000000   ja 0x174a464ac7f0  <+0x210>
+0x174a464ac7eb   20b  e8f1020000     call 0x174a464acae1  <+0x501>
+0x174a464ac7f0   210  e948020000     jmp 0x174a464aca3d  <+0x45d>
+0x174a464ac7f5   215  486339         REX.W movsxlq rdi,[rcx]
+0x174a464ac7f8   218  4883c104       REX.W addq rcx,0x4
+0x174a464ac7fc   21c  e936feffff     jmp 0x174a464ac637  <+0x57>
+0x174a464ac801   221  83fffe         cmpl rdi,0xfe
+0x174a464ac804   224  0f8d65000000   jge 0x174a464ac86f  <+0x28f>
+0x174a464ac80a   22a  0fb6543e02     movzxbl rdx,[rsi+rdi*1+0x2]
+0x174a464ac80f   22f  83fa2e         cmpl rdx,0x2e
+0x174a464ac812   232  0f8557000000   jnz 0x174a464ac86f  <+0x28f>
+0x174a464ac818   238  83fffd         cmpl rdi,0xfd
+0x174a464ac81b   23b  0f8d05000000   jge 0x174a464ac826  <+0x246>
+0x174a464ac821   241  e949000000     jmp 0x174a464ac86f  <+0x28f>
+0x174a464ac826   246  4883e904       REX.W subq rcx,0x4
+0x174a464ac82a   24a  8939           movl [rcx],rdi
+0x174a464ac82c   24c  48897db0       REX.W movq [rbp-0x50],rdi
+0x174a464ac830   250  488d4703       REX.W leaq rax,[rdi+0x3]
+0x174a464ac834   254  488945a8       REX.W movq [rbp-0x58],rax
+0x174a464ac838   258  4883c703       REX.W addq rdi,0x3
+0x174a464ac83c   25c  4883e904       REX.W subq rcx,0x4
+0x174a464ac840   260  c701c2020000   movl [rcx],0x2c2
+0x174a464ac846   266  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a464ac850   270  483bc8         REX.W cmpq rcx,rax
+0x174a464ac853   273  0f8705000000   ja 0x174a464ac85e  <+0x27e>
+0x174a464ac859   279  e883020000     call 0x174a464acae1  <+0x501>
+0x174a464ac85e   27e  e9da010000     jmp 0x174a464aca3d  <+0x45d>
+0x174a464ac863   283  486339         REX.W movsxlq rdi,[rcx]
+0x174a464ac866   286  4883c104       REX.W addq rcx,0x4
+0x174a464ac86a   28a  e900000000     jmp 0x174a464ac86f  <+0x28f>
+0x174a464ac86f   28f  0fb6543e01     movzxbl rdx,[rsi+rdi*1+0x1]
+0x174a464ac874   294  e928ffffff     jmp 0x174a464ac7a1  <+0x1c1>
+0x174a464ac879   299  488d47ff       REX.W leaq rax,[rdi-0x1]
+0x174a464ac87d   29d  483b45b8       REX.W cmpq rax,[rbp-0x48]
+0x174a464ac881   2a1  0f85e0000000   jnz 0x174a464ac967  <+0x387>
+0x174a464ac887   2a7  83fa2e         cmpl rdx,0x2e
+0x174a464ac88a   2aa  0f8460000000   jz 0x174a464ac8f0  <+0x310>
+0x174a464ac890   2b0  83fa2e         cmpl rdx,0x2e
+0x174a464ac893   2b3  0f85ce000000   jnz 0x174a464ac967  <+0x387>
+0x174a464ac899   2b9  83ffff         cmpl rdi,0xff
+0x174a464ac89c   2bc  0f8d05000000   jge 0x174a464ac8a7  <+0x2c7>
+0x174a464ac8a2   2c2  e9c0000000     jmp 0x174a464ac967  <+0x387>
+0x174a464ac8a7   2c7  4883e904       REX.W subq rcx,0x4
+0x174a464ac8ab   2cb  8939           movl [rcx],rdi
+0x174a464ac8ad   2cd  48897db0       REX.W movq [rbp-0x50],rdi
+0x174a464ac8b1   2d1  488d4701       REX.W leaq rax,[rdi+0x1]
+0x174a464ac8b5   2d5  488945a8       REX.W movq [rbp-0x58],rax
+0x174a464ac8b9   2d9  4883c701       REX.W addq rdi,0x1
+0x174a464ac8bd   2dd  4883e904       REX.W subq rcx,0x4
+0x174a464ac8c1   2e1  c70143030000   movl [rcx],0x343
+0x174a464ac8c7   2e7  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a464ac8d1   2f1  483bc8         REX.W cmpq rcx,rax
+0x174a464ac8d4   2f4  0f8705000000   ja 0x174a464ac8df  <+0x2ff>
+0x174a464ac8da   2fa  e802020000     call 0x174a464acae1  <+0x501>
+0x174a464ac8df   2ff  e959010000     jmp 0x174a464aca3d  <+0x45d>
+0x174a464ac8e4   304  486339         REX.W movsxlq rdi,[rcx]
+0x174a464ac8e7   307  4883c104       REX.W addq rcx,0x4
+0x174a464ac8eb   30b  e977000000     jmp 0x174a464ac967  <+0x387>
+0x174a464ac8f0   310  83ffff         cmpl rdi,0xff
+0x174a464ac8f3   313  0f8d65000000   jge 0x174a464ac95e  <+0x37e>
+0x174a464ac8f9   319  0fb6543e01     movzxbl rdx,[rsi+rdi*1+0x1]
+0x174a464ac8fe   31e  83fa2e         cmpl rdx,0x2e
+0x174a464ac901   321  0f8557000000   jnz 0x174a464ac95e  <+0x37e>
+0x174a464ac907   327  83fffe         cmpl rdi,0xfe
+0x174a464ac90a   32a  0f8d05000000   jge 0x174a464ac915  <+0x335>
+0x174a464ac910   330  e949000000     jmp 0x174a464ac95e  <+0x37e>
+0x174a464ac915   335  4883e904       REX.W subq rcx,0x4
+0x174a464ac919   339  8939           movl [rcx],rdi
+0x174a464ac91b   33b  48897db0       REX.W movq [rbp-0x50],rdi
+0x174a464ac91f   33f  488d4702       REX.W leaq rax,[rdi+0x2]
+0x174a464ac923   343  488945a8       REX.W movq [rbp-0x58],rax
+0x174a464ac927   347  4883c702       REX.W addq rdi,0x2
+0x174a464ac92b   34b  4883e904       REX.W subq rcx,0x4
+0x174a464ac92f   34f  c701b1030000   movl [rcx],0x3b1
+0x174a464ac935   355  48a1e004200301000000 REX.W movq rax,(0x1032004e0)
+0x174a464ac93f   35f  483bc8         REX.W cmpq rcx,rax
+0x174a464ac942   362  0f8705000000   ja 0x174a464ac94d  <+0x36d>
+0x174a464ac948   368  e894010000     call 0x174a464acae1  <+0x501>
+0x174a464ac94d   36d  e9eb000000     jmp 0x174a464aca3d  <+0x45d>
+0x174a464ac952   372  486339         REX.W movsxlq rdi,[rcx]
+0x174a464ac955   375  4883c104       REX.W addq rcx,0x4
+0x174a464ac959   379  e900000000     jmp 0x174a464ac95e  <+0x37e>
+0x174a464ac95e   37e  0fb6143e       movzxbl rdx,[rsi+rdi*1]
+0x174a464ac962   382  e929ffffff     jmp 0x174a464ac890  <+0x2b0>
+0x174a464ac967   387  0fb6143e       movzxbl rdx,[rsi+rdi*1]
+0x174a464ac96b   38b  e911feffff     jmp 0x174a464ac781  <+0x1a1>
+0x174a464ac970   390  33c0           xorl rax,rax
+0x174a464ac972   392  e9f3000000     jmp 0x174a464aca6a  <+0x48a>
+0x174a464ac977   397  55             push rbp
+0x174a464ac978   398  4889e5         REX.W movq rbp,rsp
+0x174a464ac97b   39b  57             push rdi
+0x174a464ac97c   39c  56             push rsi
+0x174a464ac97d   39d  52             push rdx
+0x174a464ac97e   39e  51             push rcx
+0x174a464ac97f   39f  4150           push r8
+0x174a464ac981   3a1  4151           push r9
+0x174a464ac983   3a3  53             push rbx
+0x174a464ac984   3a4  6a00           push 0x0
+0x174a464ac986   3a6  6a00           push 0x0
+0x174a464ac988   3a8  4889e1         REX.W movq rcx,rsp
+0x174a464ac98b   3ab  49ba6808690201000000 REX.W movq r10,0x102690868
+0x174a464ac995   3b5  492b0a         REX.W subq rcx,[r10]
+0x174a464ac998   3b8  0f8616000000   jna 0x174a464ac9b4  <+0x3d4>
+0x174a464ac99e   3be  4883f910       REX.W cmpq rcx,0x10
+0x174a464ac9a2   3c2  0f8349000000   jnc 0x174a464ac9f1  <+0x411>
+0x174a464ac9a8   3c8  48c7c0ffffffff REX.W movq rax,0xffffffff
+0x174a464ac9af   3cf  e9b6000000     jmp 0x174a464aca6a  <+0x48a>
+0x174a464ac9b4   3d4  49b8a1c54a464a170000 REX.W movq r8,0x174a464ac5a1    ;; object: 0x174a464ac5a1 <Code REGEXP>
+0x174a464ac9be   3de  4989e2         REX.W movq r10,rsp
+0x174a464ac9c1   3e1  4883ec08       REX.W subq rsp,0x8
+0x174a464ac9c5   3e5  4883e4f0       REX.W andq rsp,0xf0
+0x174a464ac9c9   3e9  4c891424       REX.W movq [rsp],r10
+0x174a464ac9cd   3ed  488bd5         REX.W movq rdx,rbp
+0x174a464ac9d0   3f0  498bf0         REX.W movq rsi,r8
+0x174a464ac9d3   3f3  488d7c24f8     REX.W leaq rdi,[rsp-0x8]
+0x174a464ac9d8   3f8  48b8b02e930001000000 REX.W movq rax,0x100932eb0
+0x174a464ac9e2   402  ffd0           call rax
+0x174a464ac9e4   404  488b2424       REX.W movq rsp,[rsp]
+0x174a464ac9e8   408  4885c0         REX.W testq rax,rax
+0x174a464ac9eb   40b  0f8579000000   jnz 0x174a464aca6a  <+0x48a>
+0x174a464ac9f1   411  4883ec10       REX.W subq rsp,0x10
+0x174a464ac9f5   415  488b75e0       REX.W movq rsi,[rbp-0x20]
+0x174a464ac9f9   419  488b7de8       REX.W movq rdi,[rbp-0x18]
+0x174a464ac9fd   41d  482bfe         REX.W subq rdi,rsi
+0x174a464aca00   420  488b5df0       REX.W movq rbx,[rbp-0x10]
+0x174a464aca04   424  48f7db         REX.W negq rbx
+0x174a464aca07   427  488d441fff     REX.W leaq rax,[rdi+rbx*1-0x1]
+0x174a464aca0c   42c  488945b8       REX.W movq [rbp-0x48],rax
+0x174a464aca10   430  49b8a1c54a464a170000 REX.W movq r8,0x174a464ac5a1    ;; object: 0x174a464ac5a1 <Code REGEXP>
+0x174a464aca1a   43a  837df000       cmpl [rbp-0x10],0x0
+0x174a464aca1e   43e  7507           jnz 0x174a464aca27  <+0x447>
+0x174a464aca20   440  ba0a000000     movl rdx,0xa
+0x174a464aca25   445  eb05           jmp 0x174a464aca2c  <+0x44c>
+0x174a464aca27   447  0fb6543eff     movzxbl rdx,[rsi+rdi*1-0x1]
+0x174a464aca2c   44c  488945b0       REX.W movq [rbp-0x50],rax
+0x174a464aca30   450  488945a8       REX.W movq [rbp-0x58],rax
+0x174a464aca34   454  488b4d10       REX.W movq rcx,[rbp+0x10]
+0x174a464aca38   458  e9a8fbffff     jmp 0x174a464ac5e5  <+0x5>
+0x174a464aca3d   45d  488b55f0       REX.W movq rdx,[rbp-0x10]
+0x174a464aca41   461  488b5dd8       REX.W movq rbx,[rbp-0x28]
+0x174a464aca45   465  488b4de0       REX.W movq rcx,[rbp-0x20]
+0x174a464aca49   469  482b4de8       REX.W subq rcx,[rbp-0x18]
+0x174a464aca4d   46d  4803ca         REX.W addq rcx,rdx
+0x174a464aca50   470  488b45b0       REX.W movq rax,[rbp-0x50]
+0x174a464aca54   474  4803c1         REX.W addq rax,rcx
+0x174a464aca57   477  8903           movl [rbx],rax
+0x174a464aca59   479  488b45a8       REX.W movq rax,[rbp-0x58]
+0x174a464aca5d   47d  4803c1         REX.W addq rax,rcx
+0x174a464aca60   480  894304         movl [rbx+0x4],rax
+0x174a464aca63   483  48c7c001000000 REX.W movq rax,0x1
+0x174a464aca6a   48a  488b5dc8       REX.W movq rbx,[rbp-0x38]
+0x174a464aca6e   48e  488be5         REX.W movq rsp,rbp
+0x174a464aca71   491  5d             pop rbp
+0x174a464aca72   492  c3             retl
+0x174a464aca73   493  48a16808690201000000 REX.W movq rax,(0x102690868)
+0x174a464aca7d   49d  483be0         REX.W cmpq rsp,rax
+0x174a464aca80   4a0  0f8705000000   ja 0x174a464aca8b  <+0x4ab>
+0x174a464aca86   4a6  e80c000000     call 0x174a464aca97  <+0x4b7>
+0x174a464aca8b   4ab  486319         REX.W movsxlq rbx,[rcx]
+0x174a464aca8e   4ae  4883c104       REX.W addq rcx,0x4
+0x174a464aca92   4b2  4903d8         REX.W addq rbx,r8
+0x174a464aca95   4b5  ffe3           jmp rbx
+0x174a464aca97   4b7  4c290424       REX.W subq [rsp],r8
+0x174a464aca9b   4bb  51             push rcx
+0x174a464aca9c   4bc  57             push rdi
+0x174a464aca9d   4bd  4989e2         REX.W movq r10,rsp
+0x174a464acaa0   4c0  4883ec08       REX.W subq rsp,0x8
+0x174a464acaa4   4c4  4883e4f0       REX.W andq rsp,0xf0
+0x174a464acaa8   4c8  4c891424       REX.W movq [rsp],r10
+0x174a464acaac   4cc  488bd5         REX.W movq rdx,rbp
+0x174a464acaaf   4cf  498bf0         REX.W movq rsi,r8
+0x174a464acab2   4d2  488d7c24f8     REX.W leaq rdi,[rsp-0x8]
+0x174a464acab7   4d7  48b8b02e930001000000 REX.W movq rax,0x100932eb0
+0x174a464acac1   4e1  ffd0           call rax
+0x174a464acac3   4e3  488b2424       REX.W movq rsp,[rsp]
+0x174a464acac7   4e7  4885c0         REX.W testq rax,rax
+0x174a464acaca   4ea  759e           jnz 0x174a464aca6a  <+0x48a>
+0x174a464acacc   4ec  49b8a1c54a464a170000 REX.W movq r8,0x174a464ac5a1    ;; object: 0x174a464ac5a1 <Code REGEXP>
+0x174a464acad6   4f6  5f             pop rdi
+0x174a464acad7   4f7  59             pop rcx
+0x174a464acad8   4f8  488b75e0       REX.W movq rsi,[rbp-0x20]
+0x174a464acadc   4fc  4c010424       REX.W addq [rsp],r8
+0x174a464acae0   500  c3             retl
+0x174a464acae1   501  4c290424       REX.W subq [rsp],r8
+0x174a464acae5   505  56             push rsi
+0x174a464acae6   506  57             push rdi
+0x174a464acae7   507  4989e2         REX.W movq r10,rsp
+0x174a464acaea   50a  4883ec08       REX.W subq rsp,0x8
+0x174a464acaee   50e  4883e4f0       REX.W andq rsp,0xf0
+0x174a464acaf2   512  4c891424       REX.W movq [rsp],r10
+0x174a464acaf6   516  488bf9         REX.W movq rdi,rcx
+0x174a464acaf9   519  488d7510       REX.W leaq rsi,[rbp+0x10]
+0x174a464acafd   51d  48ba00b0680201000000 REX.W movq rdx,0x10268b000
+0x174a464acb07   527  48b8c05d780001000000 REX.W movq rax,0x100785dc0
+0x174a464acb11   531  ffd0           call rax
+0x174a464acb13   533  488b2424       REX.W movq rsp,[rsp]
+0x174a464acb17   537  4885c0         REX.W testq rax,rax
+0x174a464acb1a   53a  0f8414000000   jz 0x174a464acb34  <+0x554>
+0x174a464acb20   540  488bc8         REX.W movq rcx,rax
+0x174a464acb23   543  49b8a1c54a464a170000 REX.W movq r8,0x174a464ac5a1    ;; object: 0x174a464ac5a1 <Code REGEXP>
+0x174a464acb2d   54d  5f             pop rdi
+0x174a464acb2e   54e  5e             pop rsi
+0x174a464acb2f   54f  4c010424       REX.W addq [rsp],r8
+0x174a464acb33   553  c3             retl
+0x174a464acb34   554  48c7c0ffffffff REX.W movq rax,0xffffffff
+0x174a464acb3b   55b  e92affffff     jmp 0x174a464aca6a  <+0x48a>
+
+
+RelocInfo (size = 15)
+0x174a464ac64a  embedded object  (0x0f75aa5539c9 <ByteArray[128]>)
+0x174a464ac9b6  embedded object  (0x174a464ac5a1 <Code REGEXP>)
+0x174a464aca12  embedded object  (0x174a464ac5a1 <Code REGEXP>)
+0x174a464acace  embedded object  (0x174a464ac5a1 <Code REGEXP>)
+0x174a464acb25  embedded object  (0x174a464ac5a1 <Code REGEXP>)
+
+--- Code ---
+kind = STUB
+major_key = StoreFastElementStub
+minor_key = 88
+name = StoreFastElementStub
+compiler = turbofan
+address = 0x174a464aefc1
+Body (size = 480)
+Instructions (size = 456)
+0x174a464af000     0  55             push rbp
+0x174a464af001     1  4889e5         REX.W movq rbp,rsp
+0x174a464af004     4  6a16           push 0x16
+0x174a464af006     6  4883ec40       REX.W subq rsp,0x40
+0x174a464af00a     a  4c8b5a0f       REX.W movq r11,[rdx+0xf]
+0x174a464af00e     e  488955d8       REX.W movq [rbp-0x28],rdx
+0x174a464af012    12  48894dd0       REX.W movq [rbp-0x30],rcx
+0x174a464af016    16  4c8bc0         REX.W movq r8,rax
+0x174a464af019    19  488945f0       REX.W movq [rbp-0x10],rax
+0x174a464af01d    1d  48897de8       REX.W movq [rbp-0x18],rdi
+0x174a464af021    21  48895de0       REX.W movq [rbp-0x20],rbx
+0x174a464af025    25  4c8bce         REX.W movq r9,rsi
+0x174a464af028    28  488975c8       REX.W movq [rbp-0x38],rsi
+0x174a464af02c    2c  4c895db8       REX.W movq [rbp-0x48],r11
+0x174a464af030    30  f6c101         testb rcx,0x1
+0x174a464af033    33  0f8443000000   jz 0x174a464af07c  <+0x7c>
+0x174a464af039    39  488b41ff       REX.W movq rax,[rcx-0x1]
+0x174a464af03d    3d  49394550       REX.W cmpq [r13+0x50],rax
+0x174a464af041    41  0f8408000000   jz 0x174a464af04f  <+0x4f>
+0x174a464af047    47  488bda         REX.W movq rbx,rdx
+0x174a464af04a    4a  e904010000     jmp 0x174a464af153  <+0x153>
+0x174a464af04f    4f  c5fb104107     vmovsd xmm0,[rcx+0x7]
+0x174a464af054    54  c5fb2cc0       vcvttsd2si rax,xmm0
+0x174a464af058    58  c5f157c9       vxorpd xmm1,xmm1,xmm1
+0x174a464af05c    5c  c5f32ac8       vcvtlsi2sd xmm1,xmm1,rax
+0x174a464af060    60  c5f92ec8       vucomisd xmm1,xmm0
+0x174a464af064    64  7a06           jpe 0x174a464af06c  <+0x6c>
+0x174a464af066    66  0f8408000000   jz 0x174a464af074  <+0x74>
+0x174a464af06c    6c  488bda         REX.W movq rbx,rdx
+0x174a464af06f    6f  e9df000000     jmp 0x174a464af153  <+0x153>
+0x174a464af074    74  4863c0         REX.W movsxlq rax,rax
+0x174a464af077    77  e907000000     jmp 0x174a464af083  <+0x83>
+0x174a464af07c    7c  488bc1         REX.W movq rax,rcx
+0x174a464af07f    7f  48c1f820       REX.W sarq rax, 32
+0x174a464af083    83  4c8be0         REX.W movq r12,rax
+0x174a464af086    86  48634233       REX.W movsxlq rax,[rdx+0x33]
+0x174a464af08a    8a  4c8965c0       REX.W movq [rbp-0x40],r12
+0x174a464af08e    8e  4c3be0         REX.W cmpq r12,rax
+0x174a464af091    91  0f8208000000   jc 0x174a464af09f  <+0x9f>
+0x174a464af097    97  488bda         REX.W movq rbx,rdx
+0x174a464af09a    9a  e9b4000000     jmp 0x174a464af153  <+0x153>
+0x174a464af09f    9f  498bc0         REX.W movq rax,r8
+0x174a464af0a2    a2  6666660f1f840000000000 nop
+0x174a464af0ad    ad  0f1f00         nop
+0x174a464af0b0    b0  a801           test al,0x1
+0x174a464af0b2    b2  0f8466000000   jz 0x174a464af11e  <+0x11e>
+0x174a464af0b8    b8  488b70ff       REX.W movq rsi,[rax-0x1]
+0x174a464af0bc    bc  49397550       REX.W cmpq [r13+0x50],rsi
+0x174a464af0c0    c0  0f843d000000   jz 0x174a464af103  <+0x103>
+0x174a464af0c6    c6  488b70ff       REX.W movq rsi,[rax-0x1]
+0x174a464af0ca    ca  66817e0b8300   cmpw [rsi+0xb],0x83
+0x174a464af0d0    d0  0f842d000000   jz 0x174a464af103  <+0x103>
+0x174a464af0d6    d6  498bc0         REX.W movq rax,r8
+0x174a464af0d9    d9  498bf1         REX.W movq rsi,r9
+0x174a464af0dc    dc  e8bf54f6ff     call 0x174a464145a0  (NonNumberToNumber)    ;; code: Builtin::NonNumberToNumber
+0x174a464af0e1    e1  4c8b5db8       REX.W movq r11,[rbp-0x48]
+0x174a464af0e5    e5  4c8b45f0       REX.W movq r8,[rbp-0x10]
+0x174a464af0e9    e9  488b7de8       REX.W movq rdi,[rbp-0x18]
+0x174a464af0ed    ed  488b5de0       REX.W movq rbx,[rbp-0x20]
+0x174a464af0f1    f1  488b55d8       REX.W movq rdx,[rbp-0x28]
+0x174a464af0f5    f5  488b4dd0       REX.W movq rcx,[rbp-0x30]
+0x174a464af0f9    f9  4c8b4dc8       REX.W movq r9,[rbp-0x38]
+0x174a464af0fd    fd  4c8b65c0       REX.W movq r12,[rbp-0x40]
+0x174a464af101   101  ebad           jmp 0x174a464af0b0  <+0xb0>
+0x174a464af103   103  c5fb104007     vmovsd xmm0,[rax+0x7]
+0x174a464af108   108  c4e1fb2cc0     vcvttsd2siq rax,xmm0
+0x174a464af10d   10d  4883f801       REX.W cmpq rax,0x1
+0x174a464af111   111  0f8094000000   jo 0x174a464af1ab  <+0x1ab>
+0x174a464af117   117  8bc0           movl rax,rax
+0x174a464af119   119  e904000000     jmp 0x174a464af122  <+0x122>
+0x174a464af11e   11e  48c1e820       REX.W shrq rax, 32
+0x174a464af122   122  488b5dd8       REX.W movq rbx,[rbp-0x28]
+0x174a464af126   126  488b5317       REX.W movq rdx,[rbx+0x17]
+0x174a464af12a   12a  f6422708       testb [rdx+0x27],0x8
+0x174a464af12e   12e  0f851f000000   jnz 0x174a464af153  <+0x153>
+0x174a464af134   134  488b5db8       REX.W movq rbx,[rbp-0x48]
+0x174a464af138   138  488b5317       REX.W movq rdx,[rbx+0x17]
+0x174a464af13c   13c  488b5b0f       REX.W movq rbx,[rbx+0xf]
+0x174a464af140   140  4803da         REX.W addq rbx,rdx
+0x174a464af143   143  488b55c0       REX.W movq rdx,[rbp-0x40]
+0x174a464af147   147  88041a         movb [rdx+rbx*1],al
+0x174a464af14a   14a  488b45f0       REX.W movq rax,[rbp-0x10]
+0x174a464af14e   14e  488be5         REX.W movq rsp,rbp
+0x174a464af151   151  5d             pop rbp
+0x174a464af152   152  c3             retl
+0x174a464af153   153  488b6d00       REX.W movq rbp,[rbp+0x0]
+0x174a464af157   157  4c8b542428     REX.W movq r10,[rsp+0x28]
+0x174a464af15c   15c  4c89542440     REX.W movq [rsp+0x40],r10
+0x174a464af161   161  4c8b542450     REX.W movq r10,[rsp+0x50]
+0x174a464af166   166  4c89542428     REX.W movq [rsp+0x28],r10
+0x174a464af16b   16b  b805000000     movl rax,0x5
+0x174a464af170   170  4c8b542438     REX.W movq r10,[rsp+0x38]
+0x174a464af175   175  4c89542450     REX.W movq [rsp+0x50],r10
+0x174a464af17a   17a  4c8b542430     REX.W movq r10,[rsp+0x30]
+0x174a464af17f   17f  4c89542448     REX.W movq [rsp+0x48],r10
+0x174a464af184   184  48895c2438     REX.W movq [rsp+0x38],rbx
+0x174a464af189   189  4c8b542418     REX.W movq r10,[rsp+0x18]
+0x174a464af18e   18e  4c89542430     REX.W movq [rsp+0x30],r10
+0x174a464af193   193  48bb709a5f0001000000 REX.W movq rbx,0x1005f9a70
+0x174a464af19d   19d  488b742410     REX.W movq rsi,[rsp+0x10]
+0x174a464af1a2   1a2  4883c428       REX.W addq rsp,0x28
+0x174a464af1a6   1a6  e935ccfaff     jmp 0x174a4645bde0  (CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit)    ;; code: Builtin::CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit
+0x174a464af1ab   1ab  4883ec08       REX.W subq rsp,0x8
+0x174a464af1af   1af  c5fb110424     vmovsd [rsp],xmm0
+0x174a464af1b4   1b4  e8c7f0faff     call 0x174a4645e280  (DoubleToI)    ;; code: Builtin::DoubleToI
+0x174a464af1b9   1b9  8b0424         movl rax,[rsp]
+0x174a464af1bc   1bc  4883c408       REX.W addq rsp,0x8
+0x174a464af1c0   1c0  e952ffffff     jmp 0x174a464af117  <+0x117>
+0x174a464af1c5   1c5  90             nop
+0x174a464af1c6   1c6  6690           nop
+
+
+Safepoints (size = 24)
+0x174a464af0e1      e1    NA  10111101000 (sp -> fp)  <none>
+
+RelocInfo (size = 7)
+0x174a464af0dd  code target (BUILTIN NonNumberToNumber)  (0x174a464145a0)
+0x174a464af1a7  code target (BUILTIN CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit)  (0x174a4645bde0)
+0x174a464af1b5  code target (BUILTIN DoubleToI)  (0x174a4645e280)
+
+--- End code ---
