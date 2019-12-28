@@ -1,3 +1,5 @@
+
+
 v8::Isolate:
 
 Isolate represents an isolated instance of the V8 engine. V8 isolates have completely separate states. Objects from one isolate must not be used in other isolates. The embedder can create multiple isolates and use them in parallel in multiple threads. An isolate can be entered by at most one thread at any given time. The Locker/Unlocker API must be used to synchronize.
@@ -16,6 +18,8 @@ A stack-allocated class that governs a number of local handles. After a handle s
 After the handle scope of a local handle has been deleted the garbage collector will no longer track the object stored in the handle and may deallocate it. The behavior of accessing a handle for which the handle scope has been deleted is undefined.
 
 v8::Local:
+
+Note: The handle stack is not part of the C++ call stack, but the handle scopes are embedded in the C++ stack. Handle scopes can only be stack-allocated, not allocated with new.
 
 An object reference managed by the v8 garbage collector.
 
@@ -70,3 +74,4 @@ v8::FunctionTemplate:
 A function template is the blueprint for a single function. You create a JavaScript instance of the template by calling the template’s GetFunction method from within the context in which you wish to instantiate the JavaScript function. You can also associate a C++ callback with a function template which is called when the JavaScript function instance is invoked.
 
 
+Local和Persistent，他们都是在v8 namespace下的，如果作为v8的使用者应该使用这里的Handle。Local Handle的特点是它们由HandleScope类负责管理，而HandleScope类对象一般作为一个栈分配的本地变量使用，也就是说在栈退出的时候，该类对象会被释放，他所管理的对象也会被释放，也就是说Local Handle所代表的对象会被释放，此时再使用Local Handle访问他所代表的对象将会是不安全和未定义的。Persistent则不同，它的生命周期是由用户维护的，在创建之后，直到我们显式的调用Persistent的Dispose函数。
