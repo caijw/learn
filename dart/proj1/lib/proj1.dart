@@ -181,23 +181,23 @@ class WidgetsFlutterBinding extends BindingBase
 //   // assert();
 // }
 
-typedef Compare = int Function(Object a, Object b);
+// typedef Compare = int Function(Object a, Object b);
 
-class SortedCollection {
-  Compare compare;
+// class SortedCollection {
+//   Compare compare;
 
-  SortedCollection(this.compare);
-}
+//   SortedCollection(this.compare);
+// }
 
-// Initial, broken implementation.
-int sort(Object a, Object b) => 0;
+// // Initial, broken implementation.
+// int sort(Object a, Object b) => 0;
 
 
-void main() {
-  SortedCollection coll = SortedCollection(sort);
-  print(coll.compare is Function);
-  print(coll.compare is Compare);
-}
+// void main() {
+//   SortedCollection coll = SortedCollection(sort);
+//   print(coll.compare is Function);
+//   print(coll.compare is Compare);
+// }
 
 class Food {
   
@@ -226,4 +226,72 @@ class Llama {
   void exercise(Activity activity, int timeLimit) {
     // ...
   }
+}
+
+// main(List<String> args) {
+//   var it = naturalsTo(5).iterator;
+//   while(it.moveNext()) {
+//     print(it.current);
+//   }
+// }
+
+// Iterable<int> naturalsTo(int n) sync* {
+//   print('start');
+//   int k = 0;
+//   while (k < n) {
+//     yield k++;
+//   }
+//   print('end');
+// }
+
+// main(List<String> args) {
+//   // 流监听
+//   // asynchronousNaturalsTo(5).listen((onData) {
+//   //   print(onData);
+//   // });
+
+//   // 流监听 StreamSubscription 对象
+//   StreamSubscription subscription = asynchronousNaturalsTo(5).listen(null);
+//   subscription.onData((value) {
+//     print(value);
+//     // subscription.pause();
+//   });
+// }
+
+// Stream<int> asynchronousNaturalsTo(int n) async* {
+//   print('start');
+//   int k = 0;
+//   while (k < n) {
+//     yield k++;
+//   }
+//   print('end');
+// }
+
+// main(List<String> args) {
+//   var it = naturalsDownFrom(5).iterator;
+//   while(it.moveNext()) {
+//     print(it.current);
+//   }
+// }
+
+// Iterable<int> naturalsDownFrom(int n) sync* {
+//   if ( n > 0) {
+//     yield n;
+//     yield* naturalsDownFrom(n-1);
+//   }
+// }
+
+class A {
+  int data;
+  A(this.data);
+}
+void change(A a) {
+  a.data = a.data + 1;
+}
+
+void main () {
+  var a = A(10);
+  print(a.data);
+  change(a);
+  print(a.data);
 }
