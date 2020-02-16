@@ -1,0 +1,14 @@
+{
+  "configVersion": 2,
+  "packages": [
+    {
+      "name": "proj1",
+      "rootUri": "../",
+      "packageUri": "lib/",
+      "languageVersion": "2.7"
+    }
+  ],
+  "generated": "2020-02-15T15:06:13.878679Z",
+  "generator": "pub",
+  "generatorVersion": "2.7.1"
+}
