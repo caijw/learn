@@ -48,3 +48,27 @@ When a state object is no longer needed, the framework calls dispose() on the st
 ## setState
 
 <https://api.flutter.dev/flutter/widgets/State/setState.html>
+
+## point
+
+### jank的优化
+
+dart线程是单线程
+
+<https://xinlei.dev/2019/10/27/flutter-%e6%80%a7%e8%83%bd%e4%bc%98%e5%8c%96-%e5%a6%82%e4%bd%95%e9%81%bf%e5%85%8d%e5%ba%94%e7%94%a8-jank/>
+
+### 性能测试
+
+- 更新状态时，影响范围尽可能地少。
+- 仅当必要时才更新状态。
+- 不要在 build 方法中进行密集型计算任务，理想的话，把这些操作放在 main isolate 之外
+
+is this optimization worth the maintenance overhead?
+
+对于大多数性能优化的问题来说，它们的答案统统指向了这句话——“它究竟取决于什么？”。对于特定 Widget 是否值得进行特定优化，并付出维护成本？在特定情况下的特殊处理是否合理？对于这些问题唯一有用答案是测试和测量。量化每个选择对性能的影响，并根据该数据做出决定。
+
+Basic advice
+
+- 不要在 DEBUG 模式下测量性能。只有 profile 模式下才能测量其性能。
+- 在真机上测试，不要在 Android 或者 iOS 模拟器上测试。虽然模拟器软件非常适合开发使用，但是它们在性能表现上和真机差异非常大。Flutter 不允许在模拟器上以 profile 模式运行，因为这并没有任何意义。这种方式收集的性能数据并不是实际的性能。理想的情况下是使用相同物理设备。让它作为你专用的性能测试机，并不再用于其他用途。
+- 学习 Flutter 性能分析工具<https://flutter.dev/docs/perf/rendering/ui-performance>
