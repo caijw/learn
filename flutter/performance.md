@@ -1,5 +1,39 @@
 # performance
 
+A widget is an immutable description of part of a user interface.
+
+Flutter has three trees:
+
+- Widget
+- Element
+- RenderObject
+
+Flutter 作为响应式框架，在渲染过程中，存在三棵树。
+Widget 树仅仅用来存放渲染内容和布局信息等描述信息，不能直接渲染出界面。Element 树与 web 的虚拟 DOM 类似， 由 Widget 树创建，存放了部件信息的上下文，同时持有 Widget 和 RenderObject。RenderObject 树由 Element 树生成，根据 Widget 的布局属性进行布局，绘制 Widget 传入的内容。
+
+![Widget+Element+RenderObject](./5.png)
+
+因为 Widget 树仅用来配置相关数据，因此构建开销是很小的。对于StatelessWidget，每次重新 new 就行；对于 StatefulWidget， 调用 state.setState() 方法，触发更新。
+
+Widget: describes the configuration for an Element.
+
+Element: an instantiation of a Widget at particular location in the tree.
+
+RenderObject: handles size, layout, and painting.
+
+| Widget | Element | RenderObject |
+| :--: | :--: | :--: |
+| Configure | Life Cycle | Paint |
+| hold properties; offer a public API | hold a spot in the UI hierarchy; manage parent/child relations | size and paint itself; lay out children; claim input event |
+| Foo | FooElement | RenderFoo |
+| holds config for a pieceof of the UI; has a public API | represents an actual piece of the UI; holds refs, manages trees | knows about size, layout, painting, and compositing |
+
+![Widget 是否更新](./2.jpg)
+
+![Widget 是否更新](./3.jpg)
+
+![Widget 渲染流程](./1.jpg)
+
 ## StatefulWidget
 
 widget stores mutable state.
@@ -72,3 +106,13 @@ Basic advice
 - 不要在 DEBUG 模式下测量性能。只有 profile 模式下才能测量其性能。
 - 在真机上测试，不要在 Android 或者 iOS 模拟器上测试。虽然模拟器软件非常适合开发使用，但是它们在性能表现上和真机差异非常大。Flutter 不允许在模拟器上以 profile 模式运行，因为这并没有任何意义。这种方式收集的性能数据并不是实际的性能。理想的情况下是使用相同物理设备。让它作为你专用的性能测试机，并不再用于其他用途。
 - 学习 Flutter 性能分析工具<https://flutter.dev/docs/perf/rendering/ui-performance>
+
+## the flutter rendering pipeline
+
+Thesis: Simple is Fast
+
+- One-pass, linear-time layout and painting
+- Simple box contraints can generate expressive layout
+- Structural repainting using compositing
+
+![Widget 渲染流程](./4.jpg)
