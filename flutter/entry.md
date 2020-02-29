@@ -1,23 +1,8 @@
-// 定义一个函数
-printInteger(int aNumber) {
-  print('The number is $aNumber.'); // 打印到控制台。
-}
+# entry
 
-class B {
-  void fun1() {
-    print('B fun1');
-  }
-}
+## `WidgetsFlutterBinding`初始化
 
-// 只有某些类型可以mix in A，这些类型是B的子类/A是B的子类
-mixin A on B {
-  void fun() {
-    super.fun1();
-  }
-}
-
-class C with B, A {}
-
+```dart
 abstract class BindingBase {
   void initInstances() {
     print('[BindingBase]initInstances');
@@ -47,6 +32,11 @@ class WidgetsFlutterBinding extends BindingBase with WidgetsBinding {
   static WidgetsBinding ensureInitialized() {
     print('[WidgetsFlutterBinding]ensureInitialized');
     if (WidgetsBinding.instance == null) {
+      // WidgetsFlutterBinding 构造函数，先调用父类构造函数
+      // BindingBase，BindingBase 会调用 initInstances ，当前
+      // 上下文会调用 WidgetsBinding 的 initInstances 方法，
+      // WidgetsBinding 的 initInstances 又会调用 父类(BindingBase)
+      // 的 initInstances 方法
       WidgetsFlutterBinding();
     }
     return WidgetsBinding.instance;
@@ -58,3 +48,16 @@ main() {
   // C().fun();
   WidgetsFlutterBinding.ensureInitialized();
 }
+```
+
+输出:
+
+```shell
+[WidgetsFlutterBinding]ensureInitialized
+[BindingBase]BindingBase
+[WidgetsBinding]initInstances
+[BindingBase]initInstances
+[BindingBase]initServiceExtensions
+```
+
+需要注意这里的初始化调用顺序！！！
