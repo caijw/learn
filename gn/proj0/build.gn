@@ -1,0 +1,5 @@
+group("root") {
+  deps = [
+    "//tools/gn/tutorial:hello_world",
+  ]
+}

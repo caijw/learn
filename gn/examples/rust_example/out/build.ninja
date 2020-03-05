@@ -1,0 +1,28 @@
+ninja_required_version = 1.7.2
+
+rule gn
+  command = ../../../../../../../gn/gn --root=./.. -q gen .
+  description = Regenerating ninja files
+
+build build.ninja: gn
+  generator = 1
+  depfile = build.ninja.d
+
+subninja toolchain.ninja
+
+build default: phony obj/default.stamp
+build hello_world: phony obj/hello_world/src/hello_world
+build bar: phony obj/hello_world/bar/src/libbar.rlib
+build foo: phony obj/hello_world/foo/src/libfoo.rlib
+build $:default: phony obj/default.stamp
+build hello_world/bar/src$:bar: phony obj/hello_world/bar/src/libbar.rlib
+build hello_world/foo/src$:foo: phony obj/hello_world/foo/src/libfoo.rlib
+build hello_world/src$:hello_world: phony obj/hello_world/src/hello_world
+
+build all: phony $
+    obj/default.stamp $
+    obj/hello_world/bar/src/libbar.rlib $
+    obj/hello_world/foo/src/libfoo.rlib $
+    obj/hello_world/src/hello_world
+
+default default

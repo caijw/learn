@@ -1,0 +1,31 @@
+rule stamp
+  command = touch ${out}
+  description = STAMP ${out}
+rule rust_bin
+  command = rustc --crate-name ${crate_name} ${in} --crate-type ${crate_type} --emit=dep-info=${target_out_dir}/${crate_name}.d,link -Z dep-info-omit-d-target ${rustflags} -o ${target_out_dir}/${crate_name} ${rustdeps} ${externs}
+  description = RUST ${target_out_dir}/${crate_name}
+  depfile = ${target_out_dir}/${crate_name}.d
+  deps = gcc
+rule rust_cdylib
+  command = rustc --crate-name ${crate_name} ${in} --crate-type ${crate_type} --emit=dep-info=${target_out_dir}/${crate_name}.d,link -Z dep-info-omit-d-target ${rustflags} -o ${target_out_dir}/lib${crate_name}.so ${rustdeps} ${externs}
+  description = RUST ${target_out_dir}/lib${crate_name}.so
+  depfile = ${target_out_dir}/${crate_name}.d
+  deps = gcc
+rule rust_rlib
+  command = rustc --crate-name ${crate_name} ${in} --crate-type ${crate_type} --emit=dep-info=${target_out_dir}/${crate_name}.d,link -Z dep-info-omit-d-target ${rustflags} -o ${target_out_dir}/lib${crate_name}.rlib ${rustdeps} ${externs}
+  description = RUST ${target_out_dir}/lib${crate_name}.rlib
+  depfile = ${target_out_dir}/${crate_name}.d
+  deps = gcc
+rule rust_staticlib
+  command = rustc --crate-name ${crate_name} ${in} --crate-type ${crate_type} --emit=dep-info=${target_out_dir}/${crate_name}.d,link -Z dep-info-omit-d-target ${rustflags} -o ${target_out_dir}/${crate_name}.a ${rustdeps} ${externs}
+  description = RUST ${target_out_dir}/${crate_name}.a
+  depfile = ${target_out_dir}/${crate_name}.d
+  deps = gcc
+rule copy
+  command = cp -af ${in} ${out}
+  description = COPY ${in} ${out}
+
+build obj/default.stamp: stamp obj/hello_world/src/hello_world
+subninja obj/hello_world/bar/src/bar.ninja
+subninja obj/hello_world/foo/src/foo.ninja
+subninja obj/hello_world/src/hello_world.ninja

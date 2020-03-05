@@ -1,0 +1,10 @@
+crate_name = foo
+crate_type = rlib
+output_extension = 
+output_dir = 
+rustflags = -Cdebuginfo=2
+target_out_dir = obj/hello_world/foo/src
+
+build obj/hello_world/foo/src/libfoo.rlib: rust_rlib ../hello_world/foo/src/lib.rs | ../hello_world/foo/src/lib.rs obj/hello_world/bar/src/libbar.rlib
+  externs = --extern bar=obj/hello_world/bar/src/libbar.rlib
+  rustdeps = -Ldependency=obj/hello_world/bar/src

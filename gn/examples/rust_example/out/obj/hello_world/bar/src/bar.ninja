@@ -1,0 +1,10 @@
+crate_name = bar
+crate_type = rlib
+output_extension = 
+output_dir = 
+rustflags = -Cdebuginfo=2
+target_out_dir = obj/hello_world/bar/src
+
+build obj/hello_world/bar/src/libbar.rlib: rust_rlib ../hello_world/bar/src/lib.rs
+  externs =
+  rustdeps =

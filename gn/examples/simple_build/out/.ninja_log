@@ -1,0 +1,4 @@
+# ninja log v5
+6	104	1583387325494225295	obj/libhello_static.hello_static.o	aec03d17371120ea
+1	104	1583387325494225204	obj/libhello_shared.hello_shared.o	f73b54eabdf048d5
+0	118	1583387325507809489	obj/hello.hello.o	1000cf14c9626d45

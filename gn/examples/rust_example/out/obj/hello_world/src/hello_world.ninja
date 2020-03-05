@@ -1,0 +1,10 @@
+crate_name = hello_world
+crate_type = bin
+output_extension = 
+output_dir = 
+rustflags = -Cdebuginfo=2
+target_out_dir = obj/hello_world/src
+
+build obj/hello_world/src/hello_world: rust_bin ../hello_world/src/main.rs | ../hello_world/src/main.rs obj/hello_world/foo/src/libfoo.rlib
+  externs = --extern baz=obj/hello_world/foo/src/libfoo.rlib
+  rustdeps = -Ldependency=obj/hello_world/foo/src -Ldependency=obj/hello_world/bar/src

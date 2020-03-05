@@ -1,0 +1,1 @@
+-Wl,--whole-archive obj/libhello_shared.hello_shared.o  -Wl,--no-whole-archive 
